@@ -1,0 +1,2326 @@
+<html lang="ar" dir="rtl"><head>
+  <link id="dynamicManifestLink" rel="manifest" href="blob:null/27a0ef2c-3966-4a90-98b5-0ee4a275fbc6">
+  <meta name="theme-color" content="#0f4c81">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="مساعد الفني - محمد عصمت">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مساعد الفني الاستشاري المتكامل - محمد عصمت</title>
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --primary-light: #1e6bb8;
+      --accent: #00897b;
+      --whatsapp-dark: #128c7e;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d1d5db;
+      --warning-bg: #fffbeb;
+      --warning-border: #f59e0b;
+      --warning-text: #92400e;
+      --info-bg: #f0fdf4;
+      --info-border: #22c55e;
+      --info-text: #166534;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      padding: 18px 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    header h1 {
+      margin: 0 0 4px;
+      font-size: 1.35rem;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 0.88rem;
+      opacity: 0.92;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 16px auto;
+      padding: 0 12px 45px;
+    }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-bottom: 16px;
+      background: #e5e7eb;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 650px) {
+      .tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .tab-btn {
+      padding: 10px 8px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--card);
+      color: var(--primary);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.12rem;
+      color: var(--primary);
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 5px;
+      color: #374151;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 11px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.92rem;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(30, 107, 184, 0.12);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .section-subtitle {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--accent);
+      margin: 14px 0 8px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      flex: 1;
+      min-width: 140px;
+      padding: 11px 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp-dark);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: var(--text);
+    }
+
+    .btn-danger {
+      background: #fee2e2;
+      color: var(--danger);
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      min-width: auto;
+      flex: 0;
+    }
+
+    .output-box {
+      background: #f8fafc;
+      border: 1px dashed #94a3b8;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 14px;
+      white-space: pre-wrap;
+      font-size: 0.88rem;
+      color: #1e293b;
+      display: none;
+    }
+
+    .stat-box {
+      background: #f0f7ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 11px;
+      text-align: center;
+    }
+
+    .stat-box .val {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+
+    .stat-box .lbl {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .alert-box {
+      background: var(--warning-bg);
+      border-right: 4px solid var(--warning-border);
+      color: var(--warning-text);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 0.83rem;
+      margin-top: 14px;
+    }
+
+    .info-box {
+      background: var(--info-bg);
+      border-right: 4px solid var(--info-border);
+      color: var(--info-text);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 0.84rem;
+      margin-top: 12px;
+    }
+
+    .log-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+      background: #fafafa;
+    }
+
+    .log-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .badge {
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .badge-paid {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge-pending {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .settings-bar {
+      background: #eef6ff;
+      border: 1px solid #cfe2ff;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .settings-bar input {
+      max-width: 220px;
+      padding: 7px 10px;
+      font-size: 0.88rem;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #111827;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    @media print {
+      header, .tabs, .btn-row, .settings-bar, footer, .no-print {
+        display: none !important;
+      }
+      body {
+        background: #fff;
+      }
+      .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+      .output-box {
+        display: block !important;
+        border: 1px solid #000;
+      }
+    }
+
+    .google-bar {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .google-bar-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .google-bar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn-sm {
+      padding: 7px 12px !important;
+      font-size: 0.82rem !important;
+      min-width: auto !important;
+      flex: 0 0 auto !important;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .filter-row input, .filter-row select {
+      flex: 1;
+      min-width: 180px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      background: #fff;
+    }
+    table.data-table th {
+      background: #eef6ff;
+      color: var(--primary);
+      font-weight: 700;
+      text-align: right;
+      padding: 10px;
+      border-bottom: 2px solid #cbd5e1;
+      white-space: nowrap;
+    }
+    table.data-table td {
+      padding: 9px 10px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+    table.data-table tr:nth-child(even) td {
+      background: #fafcff;
+    }
+    .code-pill {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.84rem;
+      margin: 1px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مساعد الفني الاستشاري المتكامل - محمد عصمت</h1>
+    <p>التبريد والتكييف • غرف التبريد والتجميد • الغسالات الأوتوماتيك</p>
+  </header>
+
+  <div class="container">
+    <div class="google-bar no-print">
+      <div class="google-bar-title">🌐 جاهز للتشغيل على متصفح جوجل (Chrome) أو الرفع السريع</div>
+      <div class="google-bar-actions">
+        <button type="button" class="btn btn-accent btn-sm" onclick="downloadHtmlFile()">⬇️ حفظ نسخة HTML</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="openGoogleSearchHelper()">🔎 بحث جوجل</button>
+      </div>
+    </div>
+
+    <div class="card no-print" id="quickSearchCard" style="padding: 12px 14px; margin-bottom: 14px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+        <strong style="color: var(--primary); font-size: 0.92rem;">⚡ بحث سريع شامل (بلي • أعطال الغسالات والتكييف • الضواغط)</strong>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="clearQuickSearch()">مسح البحث</button>
+      </div>
+      <div class="filter-row" style="margin-bottom: 0;">
+        <input type="text" id="quickGlobalSearch" placeholder="اكتب كود عطل (OE, 4E, E4)، رقم بلي (6205, 6206)، ماركة، أو ضاغط..." oninput="runQuickGlobalSearch()">
+        <button type="button" class="btn btn-primary btn-sm" onclick="runQuickGlobalSearch()">بحث</button>
+      </div>
+      <div id="quickSearchResults" class="hidden" style="margin-top: 10px; max-height: 290px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; background: #fafcff;"></div>
+    </div>
+
+    <div class="settings-bar">
+      <div style="font-size: 0.88rem; font-weight: 700; color: var(--primary);">
+        📱 رقم واتساب بيزنس المباشر: <span id="displayWhatsappNum" dir="ltr">201004549631</span>
+        <div style="font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-top: 2px;">
+          الرابط الأساسي: <span id="displayWhatsappUrl" dir="ltr">https://wa.me/201004549631</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+        <input type="text" id="consultantPhone" value="201004549631" placeholder="201004549631" dir="ltr" oninput="updateWhatsappDirectLink()">
+        <button type="button" class="btn btn-primary" style="padding: 7px 12px; min-width: auto;" onclick="savePhone()">تحديث الرقم</button>
+        <a id="directWhatsappMainLink" href="https://wa.me/201004549631" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 7px 14px; min-width: auto; text-decoration: none;">💬 فتح واتساب الأعمال</a>
+        <a id="directWhatsappGreetingLink" href="https://wa.me/201004549631?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A8%D8%B4%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D9%85%D8%AD%D9%85%D8%AF%D8%8C%20%D9%85%D8%B9%D8%A7%D9%8A%D8%A7%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%81%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm" style="text-decoration: none;">✉️ بدء محادثة جاهزة</a>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="copyDirectWhatsappLink()">📋 نسخ الرابط</button>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="installDesktopAppGuide()">🖥️ تثبيت على سطح المكتب</button>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button type="button" id="btn-tab-intake" class="tab-btn active" data-tab="intake" onclick="switchTab('intake', this)">📋 بطاقة الحالة</button>
+      <button type="button" id="btn-tab-coldroom" class="tab-btn" data-tab="coldroom" onclick="switchTab('coldroom', this)">🧊 حساب الغرف</button>
+      <button type="button" id="btn-tab-capillary" class="tab-btn" data-tab="capillary" onclick="switchTab('capillary', this)">🔧 كابيلاري وفريون</button>
+      <button type="button" id="btn-tab-log" class="tab-btn" data-tab="log" onclick="switchTab('log', this)">🗂️ سجل الحالات</button>
+      <button type="button" id="btn-tab-bearings" class="tab-btn" data-tab="bearings" onclick="switchTab('bearings', this)">⚙️ بلي الغسالات</button>
+      <button type="button" id="btn-tab-washercodes" class="tab-btn" data-tab="washercodes" onclick="switchTab('washercodes', this)">📟 أعطال الغسالات</button>
+      <button type="button" id="btn-tab-accodes" class="tab-btn" data-tab="accodes" onclick="switchTab('accodes', this)">❄️ أعطال التكييفات</button>
+      <button type="button" id="btn-tab-compressors" class="tab-btn" data-tab="compressors" onclick="switchTab('compressors', this)">⚡ الضواغط والأمبير</button>
+    </div>
+
+    <!-- 1. التبويب الأول: بطاقة بيانات الحالة -->
+    <div id="tab-intake" class="card">
+      <h2>بطاقة تسجيل بيانات الحالة والاستشارة</h2>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="clientName">اسم العميل / الجهة</label>
+          <input type="text" id="clientName" placeholder="مثال: أ. أحمد / مطعم البركة">
+        </div>
+        <div class="form-group">
+          <label for="equipType">نوع المعدة أو المشروع</label>
+          <select id="equipType">
+            <option value="تكييف (سبليت / مركزي / فري ستاند)">تكييف (سبليت / مركزي / فري ستاند)</option>
+            <option value="تبريد وتجميد تجاري (ثلاجات عرض / ديب فريزر)">تبريد وتجميد تجاري (ثلاجات عرض / ديب فريزر)</option>
+            <option value="غرفة تبريد أو تجميد">غرفة تبريد أو تجميد</option>
+            <option value="غسالة أوتوماتيك">غسالة أوتوماتيك</option>
+            <option value="مراجعة مقايسة أو عرض سعر">مراجعة مقايسة أو عرض سعر</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="brandModel">الماركة / الموديل / القدرة</label>
+          <input type="text" id="brandModel" placeholder="مثال: كاريير 3 حصان / كومبريسور دانفوس / غسالة سامسونج">
+        </div>
+        <div class="form-group">
+          <label for="serviceType">نوع الاستشارة والتسعير</label>
+          <select id="serviceType">
+            <option value="تشخيص عطل سريع (150 - 300 ج)">تشخيص عطل سريع (150 - 300 ج)</option>
+            <option value="تشخيص عطل معقد ومتابعة (350 - 600 ج)">تشخيص عطل معقد ومتابعة (350 - 600 ج)</option>
+            <option value="مراجعة مقايسة أو عرض سعر (250 - 500 ج)">مراجعة مقايسة أو عرض سعر (250 - 500 ج)</option>
+            <option value="كراسة مواصفات غرفة تبريد/تجميد (500 - 1,200 ج)">كراسة مواصفات غرفة تبريد/تجميد (500 - 1,200 ج)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="problemDesc">وصف المشكلة أو المطلوب بالتفصيل</label>
+        <textarea id="problemDesc" placeholder="اشرح الأعراض، متى بدأت المشكلة، وهل تم تغيير أي قطعة أو شحن فريون مؤخراً؟"></textarea>
+      </div>
+
+      <div class="section-subtitle">القراءات الفنية المتاحة (اختياري حسب الحالة)</div>
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="refrigerant">نوع الفريون</label>
+          <input type="text" id="refrigerant" placeholder="مثال: R22 / R410A / R134a / R404A / R290">
+        </div>
+        <div class="form-group">
+          <label for="pressures">ضغط السحب / الطرد (PSI)</label>
+          <input type="text" id="pressures" placeholder="مثال: سحب 60 PSI / طرد 240 PSI">
+        </div>
+        <div class="form-group">
+          <label for="amperage">قراءة الأمبير (A)</label>
+          <input type="text" id="amperage" placeholder="مثال: 6.5 أمبير أثناء التشغيل">
+        </div>
+        <div class="form-group">
+          <label for="tempsCode">درجات الحرارة أو كود العطل</label>
+          <input type="text" id="tempsCode" placeholder="مثال: الغرفة 5°C أو كود E4">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" onclick="generateIntakeText()">📄 تجهيز الملخص</button>
+        <button type="button" class="btn btn-whatsapp" onclick="sendIntakeWhatsApp()">💬 إرسال واتساب</button>
+        <button type="button" class="btn btn-accent" onclick="saveIntakeToLog()">💾 حفظ في السجل</button>
+        <button type="button" class="btn btn-secondary" onclick="resetIntake()">مسح</button>
+      </div>
+
+      <div id="intakeOutput" class="output-box"></div>
+      <div id="intakeCopyRow" class="btn-row hidden">
+        <button type="button" class="btn btn-secondary" onclick="copyText('intakeOutput')">📋 نسخ النص</button>
+        <button type="button" class="btn btn-secondary" onclick="window.print()">🖨️ طباعة / PDF</button>
+      </div>
+    </div>
+
+    <!-- 2. التبويب الثاني: حاسبة غرف التبريد والتجميد المفصلة -->
+    <div id="tab-coldroom" class="card hidden">
+      <h2>حاسبة مواصفات وأحمال غرف التبريد والتجميد</h2>
+
+      <div class="grid-3">
+        <div class="form-group">
+          <label for="roomLength">الطول الداخلي (متر)</label>
+          <input type="number" id="roomLength" step="0.1" min="0.5" value="3">
+        </div>
+        <div class="form-group">
+          <label for="roomWidth">العرض الداخلي (متر)</label>
+          <input type="number" id="roomWidth" step="0.1" min="0.5" value="2.5">
+        </div>
+        <div class="form-group">
+          <label for="roomHeight">الارتفاع الداخلي (متر)</label>
+          <input type="number" id="roomHeight" step="0.1" min="1.5" value="2.5">
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="roomType">درجة حرارة الغرفة المطلوبة</label>
+          <select id="roomType">
+            <option value="chiller_high">تبريد خضار/فواكه (+4°C إلى +8°C)</option>
+            <option value="chiller_low">تبريد ألبان/لحوم طازجة (0°C إلى +2°C)</option>
+            <option value="freezer">تجميد قياسي (-18°C إلى -22°C)</option>
+            <option value="blast">تجميد عميق / صدمة (-30°C فأقل)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ambientTemp">درجة حرارة الجو المحيط (الصيف)</label>
+          <select id="ambientTemp">
+            <option value="1.0">معتدل (حتى 35°C)</option>
+            <option value="1.12">حار (38°C إلى 43°C)</option>
+            <option value="1.22">شديد الحرارة / مكان مغلق (+45°C)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="insulation">حالة وسُمك العزل (بولي يوريثان)</label>
+          <select id="insulation">
+            <option value="1.0">جيد (10 سم تبريد / 15 سم تجميد)</option>
+            <option value="1.15">متوسط (7-8 سم تبريد / 10 سم تجميد)</option>
+            <option value="1.3">ضعيف أو فتح باب متكرر</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="productLoad">حركة البضاعة والتحميل اليومي</label>
+          <select id="productLoad">
+            <option value="1.0">تخزين مستقر (بضاعة مبردة مسبقاً)</option>
+            <option value="1.2">دخول بضاعة دافئة يومياً (10-15%)</option>
+            <option value="1.38">حمل مرتفع / مطعم أو مصنع نشط</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="runHours">ساعات تشغيل الضاغط اليومية المستهدفة</label>
+          <select id="runHours">
+            <option value="16">16 ساعة/يوم (تبريد قياسي مع إذابة ثلج)</option>
+            <option value="18">18 ساعة/يوم (تجميد قياسي)</option>
+            <option value="20">20 ساعة/يوم (تشغيل شاق)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="coldRefType">الفريون المقترح للغرفة</label>
+          <select id="coldRefType">
+            <option value="R404A">R404A (شائع للتبريد والتجميد)</option>
+            <option value="R22">R22 (أنظمة تقليدية)</option>
+            <option value="R134a">R134a (تبريد متوسط وموجب)</option>
+            <option value="R448A / R449A">R448A / R449A (بديل حديث عالي الكفاءة)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" onclick="calculateColdRoom()">🧮 احسب مواصفات الغرفة</button>
+        <button type="button" class="btn btn-whatsapp" onclick="sendCalcWhatsApp()">💬 إرسال التقرير للواتساب</button>
+      </div>
+
+      <div id="calcResults" class="hidden">
+        <div class="grid-3" style="margin-top: 14px;">
+          <div class="stat-box">
+            <span class="val" id="resVolume">0 م³</span>
+            <span class="lbl">الحجم الداخلي</span>
+          </div>
+          <div class="stat-box">
+            <span class="val" id="resKw">0 kW</span>
+            <span class="lbl">قدرة الوحدة المطلوبة</span>
+          </div>
+          <div class="stat-box">
+            <span class="val" id="resHp">0 HP</span>
+            <span class="lbl">القدرة الاسترشادية بالحصان</span>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 10px;">
+          <div class="stat-box" style="background: #f8fafc;">
+            <span class="lbl">القدرة الحرارية: </span>
+            <strong id="resBtu" style="color: var(--primary);">0 BTU/hr</strong>
+          </div>
+          <div class="stat-box" style="background: #f8fafc;">
+            <span class="lbl">درجة التبخير التصميمية: </span>
+            <strong id="resEvapTemp" style="color: var(--accent);">-10°C</strong>
+          </div>
+        </div>
+
+        <div id="calcOutput" class="output-box" style="display: block;"></div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-secondary" onclick="copyText('calcOutput')">📋 نسخ التقرير</button>
+          <button type="button" class="btn btn-secondary" onclick="window.print()">🖨️ طباعة / PDF</button>
+        </div>
+      </div>
+
+      <div class="alert-box">
+        <strong>تنبيه فني:</strong> اختيار الضاغط الفعلي يتم من كتالوج الشركة المصنعة بناءً على <strong>قدرة التبريد بالواط أو BTU عند درجة التبخير التصميمية ودرجة التكثيف</strong>، وليس بالاعتماد على رقم الحصان التجاري فقط.
+      </div>
+    </div>
+
+    <!-- 3. التبويب الثالث: مساعد الكابيلاري وضغوط الفريون -->
+    <div id="tab-capillary" class="card hidden">
+      <h2>مساعد الكابيلاري وضغوط التشغيل الاسترشادية</h2>
+
+      <div class="section-subtitle">أولاً: مرجع ضغوط السحب التشغيلية الشائعة (تقريبي)</div>
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="refSelect">اختر نوع الفريون والتطبيق</label>
+          <select id="refSelect" onchange="showRefGuide()">
+            <option value="r134_fridge">R134a - ثلاجة منزلية / مبرد مياه</option>
+            <option value="r134_freezer">R134a - ديب فريزر تجميد</option>
+            <option value="r290_comm">R290 - تبريد وتجميد تجاري</option>
+            <option value="r404_freezer">R404A - ديب فريزر / غرفة تجميد</option>
+            <option value="r22_ac">R22 - تكييف سبليت / شباك عام</option>
+            <option value="carrier_r22_recip_15">كارير كباس ترددي R22 - 1.5 حصان (شباك / قدرات متوسطة)</option>
+            <option value="carrier_r22_recip_30">كارير كباس ترددي R22 - 3 حصان</option>
+            <option value="carrier_r22_recip_50">كارير كباس ترددي R22 - 5 حصان</option>
+            <option value="r410_ac">R410A - تكييف سبليت حديث / إنفرتر</option>
+          </select>
+        </div>
+        <div class="stat-box" id="refGuideBox" style="display: flex; flex-direction: column; justify-content: center;">
+          <span class="val" id="refPressureVal" style="font-size: 1.05rem;">8 – 14 PSI</span>
+          <span class="lbl" id="refNoteVal">سحب R134a في الثلاجات ومبردات المياه (حسب حرارة الجو)</span>
+        </div>
+      </div>
+
+      <div class="section-subtitle">ثانياً: حاسبة تقدير مبدئي لطول الكابيلاري (للثلاجات والديب فريزر)</div>
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="compHp">قدرة الضاغط (حصان)</label>
+          <select id="compHp">
+            <option value="0.16">1/6 حصان</option>
+            <option value="0.20">1/5 حصان</option>
+            <option value="0.25" selected="">1/4 حصان</option>
+            <option value="0.33">1/3 حصان</option>
+            <option value="0.50">1/2 حصان</option>
+            <option value="0.75">3/4 حصان</option>
+            <option value="1.50">1.5 حصان (1½ HP)</option>
+            <option value="3.00">3 حصان (3 HP)</option>
+            <option value="5.00">5 حصان (5 HP)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="capDiameter">القطر الداخلي للكابيلاري المتاح (بوصة)</label>
+          <select id="capDiameter">
+            <option value="0.026">0.026 بوصة</option>
+            <option value="0.031" selected="">0.031 بوصة</option>
+            <option value="0.036">0.036 بوصة</option>
+            <option value="0.042">0.042 بوصة</option>
+            <option value="0.044">0.044 بوصة</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="capApp">نوع التطبيق</label>
+          <select id="capApp">
+            <option value="fridge">ثلاجة / تبريد (LBP/MBP)</option>
+            <option value="freezer">ديب فريزر / تجميد عميق (LBP)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="capRef">نوع الفريون</label>
+          <select id="capRef">
+            <option value="R134a">R134a</option>
+            <option value="R290">R290</option>
+            <option value="R404A">R404A</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" onclick="estimateCapillary()">📏 احسب الطول الاسترشادي</button>
+      </div>
+
+      <div id="capResultBox" class="output-box"></div>
+
+
+      <div class="section-subtitle">ثالثاً: قدرات ضواغط كارير الترددية (كباسات R22) — 1.5 ، 3 ، 5 حصان</div>
+      <div class="info-box">
+        <strong>ملاحظة ضغط الطرد/التشغيل لكباسات كارير R22:</strong> في ضواغط التبريد/التكييف الترددية (Reciprocating) على فريون R22، يرتفع ضغط الطرد والتیار بوضوح عند ارتفاع حرارة الجو المحيط أو ضعف تكثيف الكوندنسر/المروحة أو وجود شحنة زائدة أو هواء/رطوبة في الدائرة. راجع دائماً لوحة بيانات الكباس وكتالوج كارير للموديل الدقيق.
+      </div>
+      <div class="grid-2" style="margin-top: 10px;">
+        <div class="form-group">
+          <label for="carrierHpSelect">اختر قدرة كباس كارير R22</label>
+          <select id="carrierHpSelect" onchange="showCarrierRecipGuide()">
+            <option value="1.5">1.5 حصان (1½ HP - R22 ترددي)</option>
+            <option value="3.0" selected="">3 حصان (3 HP - R22 ترددي)</option>
+            <option value="5.0">5 حصان (5 HP - R22 ترددي)</option>
+          </select>
+        </div>
+        <div class="stat-box" id="carrierGuideBox" style="display: flex; flex-direction: column; justify-content: center;">
+          <span class="val" id="carrierHpTitle" style="font-size: 1.02rem;">3 حصان (3 HP - كارير R22 ترددي)</span>
+          <span class="lbl" id="carrierHpDetail">سحب استرشادي R22: ~58–68 PSI | راقب ضغط الطرد، الأمبير الفعلي، وحالة الكاباسيتور/الكونتاكتور وسلامة دائرة التبريد.</span>
+        </div>
+      </div>
+
+      <div class="alert-box">
+        <strong>ملاحظة ميدانية:</strong> الطول المحسوب استرشادي للبداية؛ الضبط الدقيق يعتمد على <strong>اختبار الممانعة (Impedance PSI)</strong> على عداد الضغط قبل اللحام النهائي، ومراقبة خط الراجع والأمبير الفعلي.
+      </div>
+    </div>
+
+    <!-- 4. التبويب الرابع: سجل الحالات المحفوظ -->
+    <div id="tab-log" class="card hidden">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+        <h2 style="margin: 0; border: none; padding: 0;">سجل الاستشارات والحالات (محفوظ على جهازك)</h2>
+        <button type="button" class="btn btn-secondary" style="flex: 0; min-width: auto; padding: 7px 12px;" onclick="exportLogText()">📤 نسخ كل السجل</button>
+      </div>
+
+      <div id="logContainer"><p style="color: var(--muted); text-align: center;">لا توجد حالات محفوظة بعد. املأ "بطاقة الحالة" واضغط "حفظ في السجل".</p></div>
+    </div>
+
+
+    <!-- 5. التبويب الخامس: مرجع أرقام بلي الغسالات والإويل سيل -->
+    <div id="tab-bearings" class="card hidden">
+      <h2>مرجع أرقام بلي الغسالات والإويل سيل</h2>
+
+      <div class="filter-row">
+        <input type="text" id="bearingSearch" placeholder="ابحث بالماركة، السعة، نوع الغسالة، أو رقم البلي..." oninput="renderBearingsTable()">
+        <select id="bearingCategoryFilter" onchange="renderBearingsTable()">
+          <option value="all">كل الغسالات الأوتوماتيك</option>
+          <option value="front_load">أوتوماتيك تحميل أمامي (Front Load)</option>
+          <option value="top_load_lg_dd">فوق أوتوماتيك دايركت درايف (Direct Drive)</option>
+          <option value="top_load_std">فوق أوتوماتيك حوض واحد</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>الماركة / الفئة</th>
+              <th>النوع / السعة</th>
+              <th>بلي داخلي (Inner)</th>
+              <th>بلي خارجي (Outer)</th>
+              <th>إويل سيل (Oil Seal)</th>
+              <th>ملاحظات ميدانية</th>
+            </tr>
+          </thead>
+          <tbody id="bearingsTableBody"><tr><td><strong>Bosch / Siemens (بوش / سيمنز)</strong></td><td>أمامي تحميل أمامي (7 - 9 كجم شائع)</td><td><span class="code-pill">6205 / 6206</span></td><td><span class="code-pill">6204 / 6205</span></td><td>35×62×10 أو 37×66×10 (حسب الموديل)</td><td>تأكد من حالة فحمات الموتور أو درايفر الإنفرتر ونظافة بيت البلي قبل التركيب.</td></tr><tr><td><strong>Ariston / Indesit (أريستون / إندست)</strong></td><td>أمامي تحميل أمامي (6 - 9 كجم شائع)</td><td><span class="code-pill">6205 / 6206</span></td><td><span class="code-pill">6204 / 6205</span></td><td>30×52×8.5 أو 37×66×10 (حسب الموديل)</td><td>راجع رقم الموديل على ملصق الباب وتأكد من استقامة الصليب وعدم وجود تآكل على جلبة العمود.</td></tr><tr><td><strong>Zanussi / Electrolux (زانوسي / إلكترولوكس)</strong></td><td>أمامي تحميل أمامي (7 - 9 كجم شائع)</td><td><span class="code-pill">6205 / 6206</span></td><td><span class="code-pill">6204 / 6205</span></td><td>35×58/62×10 أو 37×66×10 (حسب الموديل)</td><td>افحص مانع التسريب والسوكت/الجلدة المحيطة بالباب مع فحص البلي عند وجود صوت عصر.</td></tr><tr><td><strong>Sharp / Kiriazi (شارب / كريازي)</strong></td><td>أمامي تحميل أمامي (7 - 8 كجم شائع)</td><td><span class="code-pill">6205</span></td><td><span class="code-pill">6204</span></td><td>أويل سيل حلة حسب الموديل والمقاس الفعلي</td><td>طابق مقاس العمود الداخلي والخارجي للبلي القديم قبل الشراء.</td></tr><tr><td><strong>Samsung (سامسونج) - فوق أوتوماتيك</strong></td><td>حوض واحد فوق أوتوماتيك (7 - 13 كجم)</td><td><span class="code-pill">6205 / 6206</span></td><td><span class="code-pill">6204 / 6205</span></td><td>أويل سيل جيربوكس/حوض حسب الموديل</td><td>وجود صدأ أو أثر مياه أسفل الجيربوكس غالباً يعني تلف أويل سيل الميه وتأثر البلي.</td></tr><tr><td><strong>LG (إل جي) - فوق أوتوماتيك تقليدي / Belt</strong></td><td>حوض واحد (7 - 12 كجم)</td><td><span class="code-pill">6205 / 6206</span></td><td><span class="code-pill">6204 / 6205</span></td><td>أويل سيل حوض حسب الموديل</td><td>افحص كاوتش/جلبة مانع التسريب وحرية حركة المحور الرأسي.</td></tr><tr><td><strong>LG (إل جي) - Direct Drive</strong></td><td>فوق أوتوماتيك (7 - 10 كجم شائع)</td><td><span class="code-pill">6205 (2RS)</span></td><td><span class="code-pill">6206 (2RS)</span></td><td>أويل سيل خاص بعمود الدفع المباشر (حسب الموديل)</td><td>تأكد من سلامة جلبة/شافت الحلة والسنون وعدم وجود تأكل أو تسريب مياه على البلي.</td></tr><tr><td><strong>LG (إل جي) - Front Load</strong></td><td>أمامي تحميل أمامي (7 - 8 كجم شائع)</td><td><span class="code-pill">6206</span></td><td><span class="code-pill">6205</span></td><td>37×66×9.5 / 12 (حسب الموديل)</td><td>افحص صليب الحلة (Spider) جيداً للتأكد من عدم وجود تآكل أو التواء.</td></tr><tr><td><strong>LG (إل جي) - Front Load كبير</strong></td><td>أمامي سعات أكبر (9 - 12 كجم شائع)</td><td><span class="code-pill">6306 / 6207</span></td><td><span class="code-pill">6206 / 6305</span></td><td>42×72×10 / 12 (حسب الموديل)</td><td>يُفضل استبدال البلي والأويل سيل معاً بعد تنظيف بيت البلي من أي بقايا ماء أو صابون.</td></tr><tr><td><strong>Samsung (سامسونج) - Front Load</strong></td><td>أمامي شائع (7 - 8 كجم)</td><td><span class="code-pill">6205</span></td><td><span class="code-pill">6204</span></td><td>35×65.55×10 / 12 (حسب الموديل)</td><td>راجع رقم الموديل المدون على الباب أو الظهر لتأكيد مقاس الإويل سيل بدقة.</td></tr><tr><td><strong>Samsung (سامسونج) - Front Load كبير</strong></td><td>أمامي سعات أكبر (8 - 10.5 كجم)</td><td><span class="code-pill">6206</span></td><td><span class="code-pill">6205</span></td><td>37×66×10 / 12 (حسب الموديل)</td><td>تأكد من نظافة مكان جلوس الإويل سيل وعدم وجود خدوش على عمود الصليب.</td></tr><tr><td><strong>Toshiba (توشيبا) - فوق أوتوماتيك</strong></td><td>حوض واحد شائع (7 - 11 كجم)</td><td><span class="code-pill">6205</span></td><td><span class="code-pill">6204 / 6205</span></td><td>أويل سيل حوض توشيبا حسب الموديل</td><td>غالباً ما يرتبط تلف البلي بتسريب من أويل سيل الجيربوكس أو تآكل عمود الحلة.</td></tr><tr><td><strong>Kiriazi / Zanussi / Ariston / Sharp</strong></td><td>أمامي فئات متعددة (حسب الموديل)</td><td><span class="code-pill">6205 / 6206</span></td><td><span class="code-pill">6204 / 6205</span></td><td>حسب موديل الحلة (يُطابق بالرقم/المقاس)</td><td>في بعض الموديلات تكون الحلة مبرشمة؛ راجع طريقة فك الحلة وتجهيز مانع التسريب.</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="alert-box">
+        <strong>تنبيه فني:</strong> أرقام البلي والإويل سيل تختلف أحياناً حسب سنة الصنع أو رقم الموديل الدقيق أو صليب الحلة/العمود—طابق الأرقام أو المقاسات الفعلية على البلي القديم والعمود قبل الشراء النهائي، وتأكد من حالة جلبة/عمود الحلة وأويل سيل الميه لمنع تسريب المياه إلى البلي.
+      </div>
+    </div>
+
+
+    <!-- 6. التبويب السادس: مرجع أكواد وأعطال جميع الغسالات الأوتوماتيك -->
+    <div id="tab-washercodes" class="card hidden">
+      <h2>مرجع أكواد وأعطال جميع الغسالات الأوتوماتيك (فوق أوتوماتيك وأمامي)</h2>
+
+      <div class="filter-row">
+        <input type="text" id="washerCodeSearch" placeholder="ابحث بالماركة، فوق أوتوماتيك، الكود (مثل OE, IE, dE, 4E, UE, F05)، أو العطل..." oninput="renderWasherCodesTable()">
+        <select id="washerTypeFilter" onchange="renderWasherCodesTable()">
+          <option value="all">كل الفئات (فوق أوتوماتيك وأمامي)</option>
+          <option value="top_load">فوق أوتوماتيك (Top Load)</option>
+          <option value="front_load">تحميل أمامي (Front Load)</option>
+        </select>
+        <select id="washerBrandFilter" onchange="renderWasherCodesTable()">
+          <option value="all">كل الماركات</option>
+          <option value="LG">إل جي (LG)</option>
+          <option value="Samsung">سامسونج (Samsung)</option>
+          <option value="Toshiba">توشيبا (Toshiba)</option>
+          <option value="Ariston / Indesit">أريستون / إندست (Ariston / Indesit)</option>
+          <option value="Zanussi / Electrolux">زانوسي / إلكترولوكس (Zanussi / Electrolux)</option>
+          <option value="Bosch / Siemens">بوش / سيمنز (Bosch / Siemens)</option>
+          <option value="Sharp / Kiriazi / General">شارب / كريازي / موديلات أخرى</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>الماركة</th>
+              <th>الكود / العرض</th>
+              <th>العطل المحتمل</th>
+              <th>أهم نقاط الفحص الميداني</th>
+            </tr>
+          </thead>
+          <tbody id="washerCodesTableBody"><tr><td><strong>LG</strong></td><td><span class="code-pill">OE (فوق أوتوماتيك)</span></td><td>عدم طرد المياه أو بطء الصرف في الفوق أوتوماتيك</td><td>افحص طلمبة الصرف، خرطوم الطرد، فلتر الطلمبة، وسلامة مسار المياه.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">IE (فوق أوتوماتيك)</span></td><td>تأخر أو عدم دخول المياه في الفوق أوتوماتيك</td><td>افحص ضغط المياه، مصفاة المدخل، صمام الدخول، وتوصيلاته.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">UE (فوق أوتوماتيك)</span></td><td>عدم اتزان الحلة أو الملابس أثناء العصر في الفوق أوتوماتيك</td><td>رتّب الملابس بالتساوي، افحص اتزان الغسالة، وسوست/مساعدات الحلة.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">dE / dS (فوق أوتوماتيك)</span></td><td>الغطاء العلوي مفتوح أو مشكلة في سويتش الغطاء/القفل</td><td>أغلق الغطاء بإحكام، افحص سويتش/قفل الباب العلوي وضفيرة الكارت.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">PE (فوق أوتوماتيك)</span></td><td>عطل حساس مستوى المياه (Water Level Sensor) في الفوق أوتوماتيك</td><td>افحص حساس الليفل، الخرطوم الهوائي من الانسداد/التنفيس، وفيشة الكارت.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">4E / 4C (فوق أوتوماتيك)</span></td><td>مشكلة في دخول المياه في الغسالة الفوق أوتوماتيك</td><td>افحص ضغط المياه، الفلتر الشبكي، صمام الدخول، وأسلاكه.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">5E / 5C (فوق أوتوماتيك)</span></td><td>مشكلة في طرد/تصريف المياه في الفوق أوتوماتيك</td><td>نظّف فلتر الطلمبة، افحص خرطوم الصرف، وتأكد من عمل طلمبة الطرد.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">UE / UC (فوق أوتوماتيك)</span></td><td>عدم اتزان الحلة أو اهتزاز أثناء العصر في الفوق أوتوماتيك</td><td>أعد توزيع الغسيل، افحص مستوى الأرضية، ومساعدات/سوست التعليق.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">dS / dC (فوق أوتوماتيك)</span></td><td>مشكلة في غطاء الغسالة الفوق أوتوماتيك أو سويتش الأمان</td><td>افحص غلق الغطاء، سويتش/قفل الغطاء، وسلامة الضفيرة.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">1E / 1C (فوق أوتوماتيك)</span></td><td>مشكلة في حساس مستوى المياه في الفوق أوتوماتيك</td><td>افحص حساس الليفل، الخرطوم الهوائي، والفيشة.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E1 (فوق أوتوماتيك)</span></td><td>مشكلة طرد/تصريف المياه في توشيبا فوق أوتوماتيك</td><td>افحص مسار الطرد، فلتر الطلمبة، وطلمبة/صمام الطرد.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E2 (فوق أوتوماتيك)</span></td><td>الغطاء العلوي مفتوح أو عطل سويتش غطاء توشيبا</td><td>افحص الغطاء العلوي، سويتش الغطاء، وتوصيلات الأسلاك.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E4 / E5 (فوق أوتوماتيك)</span></td><td>مشكلة دخول المياه أو حساس مستوى المياه في توشيبا</td><td>افحص مصدر المياه، الصمام، وحساس الليفل/الخرطوم الهوائي.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E7 / E9 (فوق أوتوماتيك)</span></td><td>حماية أو خلل في حساس السرعة/الوزن أو التحكم في توشيبا</td><td>افحص حساس السرعة/الوزن، حركة الحلة، والضفيرة.</td></tr><tr><td><strong>Sharp / Kiriazi / General</strong></td><td><span class="code-pill">E1 / E2 / E3 / E4 (فوق أوتوماتيك)</span></td><td>أعطال شائعة للفوق أوتوماتيك (دخول ماء، صرف، غطاء، اتزان، أو حساس ليفل)</td><td>افحص صمام الدخول، طلمبة الطرد، سويتش الغطاء، موازنة الحلة، وحساس الليفل.</td></tr><tr><td><strong>Sharp / Kiriazi / General</strong></td><td><span class="code-pill">سحب ماء مستمر أو عدم العصر (فوق أوتوماتيك)</span></td><td>تعليق صمام الدخول، خلل حساس الليفل، أو مشكلة في الصرف/الفرامل/الكلتش</td><td>افحص صمام الدخول، الخرطوم الهوائي لحساس الليفل، طلمبة الطرد، وميكانيكية الحلة.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">OE</span></td><td>مشكلة في طرد/تصريف المياه</td><td>افحص طلمبة الطرد، خرطوم الصرف من الانسداد/الالتواء، وفلتر الطلمبة.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">IE</span></td><td>بطء أو عدم دخول المياه خلال الوقت المحدد</td><td>افحص ضغط المياه، صمام الدخول (Solenoid Valve)، والفلتر الشبكي.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">DE / dE / dE1 / dE2</span></td><td>مشكلة في قفل الباب أو إغلاق الباب</td><td>افحص لسان الباب، مفتاح/قفل الباب (Door Lock)، وتوصيلات الضفيرة.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">UE</span></td><td>عدم اتزان الغسيل أو توزيع الحمل داخل الحلة</td><td>أعد توزيع الملابس، افحص ميزان الغسالة، ومساعدات/سوست التعليق.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">FE</span></td><td>زيادة منسوب المياه عن الحد المسموح (Overflow)</td><td>افحص صمام الدخول (قد يكون عالقاً مفتوحاً) وحساس مستوى المياه (Pressure Sensor).</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">tE</span></td><td>عطل في حساس درجة حرارة المياه (Thermistor)</td><td>قِس مقاومة حساس الحرارة وتأكد من سلامة الأسلاك والموصل.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">LE / LE1</span></td><td>حمل زائد أو مقاومة دوران عالية للموتور / Direct Drive</td><td>افحص حركة الحلة يدوياً، حساس Hall، ملفات/توصيلات الموتور، وتوزيع الغسيل.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">4E / 4C</span></td><td>مشكلة في تزويد المياه أو تأخر دخولها</td><td>افحص مصدر المياه، خراطيم وصمام الدخول، وفلتر الشوائب.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">5E / 5C</span></td><td>مشكلة في تصريف المياه من الحلة</td><td>نظّف فلتر الطلمبة، افحص خرطوم الصرف، وتأكد من عمل طلمبة الطرد.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">dE / dC / Ed</span></td><td>الباب غير مغلق بإحكام أو عطل قفل الباب</td><td>تأكد من غلق الباب بالكامل وفحص قفل الباب وأسلاكه.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">UE / UC</span></td><td>عدم اتزان الحلة أثناء العصر</td><td>رتّب الملابس بالتساوي وتأكد من استواء الغسالة على الأرض.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">HE / HC / tE</span></td><td>مشكلة في السخان أو حساس الحرارة</td><td>افحص مقاومة السخان (Heater)، حساس الحرارة، وتوصيلات الكارت.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">3E / 3C / bE</span></td><td>مشكلة في دوران الموتور أو حساس التاكو/السرعة</td><td>افحص توصيلات الموتور، الفحمات (إن وجدت)، حساس السرعة، أو درايفر الكارت.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E1</span></td><td>مشكلة في طرد/تصريف المياه</td><td>افحص مسار الصرف، طلمبة/صمام الطرد، والفلتر الداخلي.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E2</span></td><td>عدم إغلاق الغطاء العلوي أو عطل سويتش الغطاء</td><td>افحص غطاء الغسالة ومفتاح أمان الغطاء (Lid Switch) والضفيرة.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E4 / E5</span></td><td>مشكلة في دخول المياه أو حساس مستوى المياه</td><td>افحص ضغط المياه، صمام الدخول، وحساس الليفل/الخرطوم الهوائي.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E7 / E9 / EC</span></td><td>خلل في حساس السرعة/الوزن أو دائرة التحكم</td><td>افحص حساس السرعة/الضفيرة وأعد اختبار التشغيل بعد مراجعة التوصيلات.</td></tr><tr><td><strong>Ariston / Indesit</strong></td><td><span class="code-pill">F01 / F1</span></td><td>مشكلة في دائرة تحكم الموتور أو قصر/توصيل الموتور</td><td>افحص موصل الموتور، الفحمات/الملفات، وتوصيلات الكارت الإلكتروني.</td></tr><tr><td><strong>Ariston / Indesit</strong></td><td><span class="code-pill">F02 / F2</span></td><td>عدم استشعار دوران الموتور (Tachometer)</td><td>افحص حساس التاكو وضفيرة الموتور وحرية حركة الحلة.</td></tr><tr><td><strong>Ariston / Indesit</strong></td><td><span class="code-pill">F05 / F06 / F5</span></td><td>مشكلة في تصريف المياه أو حساس مستوى المياه</td><td>افحص طلمبة الطرد، خرطوم الصرف، وحساس الضغط/الليفل.</td></tr><tr><td><strong>Ariston / Indesit</strong></td><td><span class="code-pill">F07 / F08</span></td><td>مشكلة في دائرة السخان أو ريليه السخان</td><td>افحص السخان، حساس الحرارة، وريليه السخان على الكارت.</td></tr><tr><td><strong>Ariston / Indesit</strong></td><td><span class="code-pill">F12 / Door Lock</span></td><td>عدم إتمام إشارة قفل الباب مع الكارت</td><td>افحص قفل الباب، الأسلاك بين الكارت والقفل، وسلامة سوكت الكارت.</td></tr><tr><td><strong>Zanussi / Electrolux</strong></td><td><span class="code-pill">E10 / EF0</span></td><td>مشكلة في دخول المياه أو وجود رغوة زائدة/انسداد صرف</td><td>افحص ضغط المياه، صمام الدخول، فلتر الطلمبة، وخرطوم الصرف.</td></tr><tr><td><strong>Zanussi / Electrolux</strong></td><td><span class="code-pill">E20 / EFn</span></td><td>مشكلة في تصريف المياه من الغسالة</td><td>نظّف الفلتر وافحص طلمبة الطرد وخرطوم التصريف.</td></tr><tr><td><strong>Zanussi / Electrolux</strong></td><td><span class="code-pill">E40</span></td><td>مشكلة في قفل الباب أو إغلاق الباب</td><td>تأكد من غلق الباب جيداً وفحص قفل الباب وأسلاكه.</td></tr><tr><td><strong>Zanussi / Electrolux</strong></td><td><span class="code-pill">E50 / EH0</span></td><td>مشكلة في دائرة الموتور أو جهد التغذية</td><td>افحص توصيلات الموتور، الفحمات/الإنفرتر، واستقرار الجهد الكهربائي.</td></tr><tr><td><strong>Bosch / Siemens</strong></td><td><span class="code-pill">E18 / F18</span></td><td>عدم تصريف المياه خلال الزمن المحدد</td><td>نظّف فلتر الطلمبة، افحص ريش الطلمبة، وخرطوم الصرف.</td></tr><tr><td><strong>Bosch / Siemens</strong></td><td><span class="code-pill">E23 / F23</span></td><td>تفعيل نظام منع التسريب (AquaStop / قاعدة المياه)</td><td>افحص وجود ماء أسفل الغسالة في صينية الأمان ومصدر التسريب.</td></tr><tr><td><strong>Bosch / Siemens</strong></td><td><span class="code-pill">E29 / F29</span></td><td>عدم دخول المياه أو ضعف تدفق الماء</td><td>افحص محبس المياه، الفلتر، وصمام الدخول.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">PE / PF</span></td><td>مشكلة في حساس مستوى المياه أو قصر/توصيل خاطئ</td><td>افحص حساس الليفل، الخرطوم الهوائي، وضفيرة الكارت.</td></tr><tr><td><strong>LG</strong></td><td><span class="code-pill">AE / CL / PF</span></td><td>فشل في الاتصال أو حماية الكارت / انقطاع كهرباء</td><td>افحص استقرار الجهد، كابل التغذية، وتوصيلات الكارت الإلكتروني.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">1E / 1C</span></td><td>خلل في حساس مستوى المياه (Water Level Sensor)</td><td>افحص حساس الليفل، سلامة الخرطوم الهوائي، وتوصيلات الفيشة.</td></tr><tr><td><strong>Samsung</strong></td><td><span class="code-pill">9E1 / 9E2 / OC / LC</span></td><td>ارتفاع/انخفاض الجهد الكهربائي أو تسريب مياه بالقاعدة</td><td>قِس جهد التغذية وتأكد من عدم وجود تسريب مياه في قاعدة الغسالة.</td></tr><tr><td><strong>Toshiba</strong></td><td><span class="code-pill">E3 / E6</span></td><td>مشكلة في عدم ثبات الحلة/العصر أو حساسات الحماية</td><td>افحص توزيع الغسيل، موازنة الحلة، ومسار الصرف والحساسات.</td></tr><tr><td><strong>Ariston / Indesit</strong></td><td><span class="code-pill">F09 / F10 / F11</span></td><td>خلل في سوفتوير/إعدادات الكارت أو دائرة الطلمبة</td><td>افحص طلمبة الطرد، التوصيلات، وسلامة مسارات الكارت.</td></tr><tr><td><strong>Zanussi / Electrolux</strong></td><td><span class="code-pill">E60 / E66 / E70</span></td><td>مشكلة في دائرة التسخين أو حساس الحرارة</td><td>افحص مقاومة السخان، حساس الحرارة، وريليه التسخين.</td></tr><tr><td><strong>Bosch / Siemens</strong></td><td><span class="code-pill">E02 / F02</span></td><td>مشكلة في دوران الموتور أو الفحمات/التوصيلات</td><td>افحص الفحمات، ضفيرة الموتور، وحرية حركة الحلة.</td></tr><tr><td><strong>Sharp / Kiriazi / General</strong></td><td><span class="code-pill">E3 / E4 / PE / DE</span></td><td>عدم اتزان الغسيل أو مشكلة في مستوى المياه أو قفل الباب</td><td>أعد موازنة الحمل وافحص حساس الليفل، قفل الباب، وضفيرة التحكم.</td></tr><tr><td><strong>Sharp / Kiriazi / General</strong></td><td><span class="code-pill">طرد مستمر أو دخول ماء بدون توقف</span></td><td>undefined</td><td>افحص صمام الدخول (قد لا يغلق بالكامل) وحساس الليفل أو الكارت.</td></tr><tr><td><strong>Sharp / Kiriazi / General</strong></td><td><span class="code-pill">E1 / E2 / IE / OE</span></td><td>أعطال شائعة في تزويد المياه أو الصرف أو الباب</td><td>طابق الكود مع دليل الموديل وافحص صمام الدخول، طلمبة الطرد، وسويتش الباب/الغطاء.</td></tr><tr><td><strong>Sharp / Kiriazi / General</strong></td><td><span class="code-pill">عدم العصر أو توقف البرنامج مع بقاء الماء</span></td><td>undefined</td><td>افحص طلمبة الطرد، حساس مستوى المياه، فرامل/كلتش الحلة، وتوزيع الغسيل.</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="alert-box">
+        <strong>تنبيه فني:</strong> قد يختلف معنى الكود البسيط بين فئات الموديلات أو الإصدارات القديمة والحديثة داخل نفس الماركة؛ يُنصح دائماً بربط الكود بالفحص العملي للضفيرة، الحساس، طلمبة الطرد، صمام الدخول، قفل الباب، وكارت التحكم.
+      </div>
+    </div>
+
+    <!-- التبويب المستقل لأكواد وأعطال التكييفات -->
+    <div id="tab-accodes" class="card hidden">
+      <h2>مرجع أكواد وأعطال التكييفات (سبليت • إنفرتر • شباك • فري ستاند)</h2>
+
+      <div class="filter-row">
+        <input type="text" id="acCodeSearch" placeholder="ابحث بالماركة أو الكود (مثل E1, E4, E6, CH, F1, P4, EC) أو العطل..." oninput="renderAcCodesTable()">
+        <select id="acBrandFilter" onchange="renderAcCodesTable()">
+          <option value="all">كل الماركات</option>
+          <option value="Carrier (كارير)">كارير (Carrier)</option>
+          <option value="LG (إل جي)">إل جي (LG)</option>
+          <option value="Samsung (سامسونج)">سامسونج (Samsung)</option>
+          <option value="Sharp (شارب)">شارب (Sharp)</option>
+          <option value="Midea / Fresh / General">ميديا / فريش / عام (Midea / Fresh / General)</option>
+          <option value="Daikin / Gree">دايكن / جري (Daikin / Gree)</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>الماركة / الفئة</th>
+              <th>الكود / العرض</th>
+              <th>العطل المحتمل</th>
+              <th>أهم نقاط الفحص الميداني</th>
+            </tr>
+          </thead>
+          <tbody id="acCodesTableBody"><tr><td><strong>Carrier (كارير)</strong></td><td><span class="code-pill">E1 / E2</span></td><td>عطل حساس درجة حرارة الهواء أو حساس الكويل الداخلي</td><td>افحص مقاومة سنسور الغرفة وسنسور الكويل وسلامة أطراف التوصيل.</td></tr><tr><td><strong>Carrier (كارير)</strong></td><td><span class="code-pill">E4 / E5 / P4</span></td><td>حماية ارتفاع حرارة المواسير/الضاغط أو مشكلة في الوحدة الخارجية</td><td>افحص نظافة المكثف، مروحة الخارجية، الفريون، والكونتاكتور/الكاباسيتور.</td></tr><tr><td><strong>Carrier (كارير)</strong></td><td><span class="code-pill">E6 / EC</span></td><td>مشكلة اتصال بين الداخلية والخارجية أو عطل مروحة/كارت</td><td>راجع كابل الإشارة، ملفات موتور المروحة، وسلامة الكارت.</td></tr><tr><td><strong>LG (إل جي)</strong></td><td><span class="code-pill">CH01 / CH02</span></td><td>مشكلة في حساس حرارة الهواء الداخلي أو حساس ملف المبخر</td><td>قِس مقاومة الثرمستور وتأكد من عدم وجود قطع أو رطوبة بالفيشة.</td></tr><tr><td><strong>LG (إل جي)</strong></td><td><span class="code-pill">CH05 / CH10</span></td><td>خلل في الاتصال بين الوحدتين أو مشكلة في موتور مروحة الداخلية</td><td>افحص خط البيانات (Comm) وسرعة/نبضات موتور المروحة.</td></tr><tr><td><strong>LG (إل جي)</strong></td><td><span class="code-pill">CH21 / CH23 / CH26</span></td><td>حماية تيار/جهد الإنفرتر أو ارتفاع حرارة الضاغط/DC Bus</td><td>افحص الجهد الكهربائي، تهوية الخارجية، شحنة الفريون، ودائرة الإنفرتر.</td></tr><tr><td><strong>Samsung (سامسونج)</strong></td><td><span class="code-pill">E1 21 / E1 22</span></td><td>مشكلة في حساس حرارة الغرفة أو حساس مبخر الوحدة الداخلية</td><td>افحص الحساسات وأسلاكها وتأكد من ثباتها في مكانها.</td></tr><tr><td><strong>Samsung (سامسونج)</strong></td><td><span class="code-pill">E1 54 / E4 61 / E4 64</span></td><td>مشكلة في مروحة الداخلية أو بدء/تشغيل الضاغط أو تيار الإنفرتر</td><td>افحص موتور المروحة، كاباسيتور/درايفر الكباس، والمقاومات/الضغوط.</td></tr><tr><td><strong>Sharp (شارب)</strong></td><td><span class="code-pill">H1 / F1 / E1</span></td><td>حماية ضغط/حرارة أو خلل في الحساسات أو مروحة الوحدة</td><td>افحص نظافة الفلاتر والمكثف، الحساسات، وسلامة المروحة.</td></tr><tr><td><strong>Sharp (شارب)</strong></td><td><span class="code-pill">U4 / CC / CH</span></td><td>مشكلة اتصال أو خطأ في إشارة التحكم بين الوحدتين</td><td>افحص توصيلات الكابلات بين الداخلية والخارجية والتغذية.</td></tr><tr><td><strong>Midea / Fresh / General</strong></td><td><span class="code-pill">E1 / E2 / E3</span></td><td>عطل حساس الغرفة، حساس الكويل، أو حساس الكويل الخارجي/السرعة</td><td>افحص الثرمستورات وسرعة مروحة الوحدة الداخلية/الخارجية.</td></tr><tr><td><strong>Midea / Fresh / General</strong></td><td><span class="code-pill">E4 / E5 / P1 / P4</span></td><td>حماية تجمد/حرارة أو جهد/ضغط أو مشكلة اتصال/إنفرتر</td><td>افحص الجهد، الشحنة، نظافة الكويلات، وسلامة التوصيلات.</td></tr><tr><td><strong>Daikin / Gree</strong></td><td><span class="code-pill">U4 / A6 / E6 / H6</span></td><td>مشكلة اتصال بين الوحدتين أو موتور مروحة الداخلية أو حماية الضاغط</td><td>افحص كابل الربط، موتور المروحة، والحساسات وشحنة الفريون.</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="alert-box">
+        <strong>تنبيه فني:</strong> أكواد التكييفات تختلف بين الموديلات العادية والإنفرتر ومن جيل لآخر؛ يُنصح دائماً بربط الكود بقياس الحساسات، فحص المراوح والكونتاكتور/الكارت، وقياس الضغوط والأمبير الفعلي.
+      </div>
+    </div>
+
+
+    <!-- 7. التبويب السابع: بيانات الضواغط والأمبير وملاحظات الفحص العملي -->
+    <div id="tab-compressors" class="card hidden">
+      <h2>بيانات الضواغط والأمبير وملاحظات الفحص العملي</h2>
+
+      <div class="info-box">
+        <strong>قاعدة فحص ميدانية:</strong> القيم الموضحة استرشادية للمقارنة السريعة؛ يُعتمد دائماً على <strong>RLA / FLA / LRA</strong> المكتوبة على شاسيه الضاغط، ومقارنة الأمبير الفعلي مع الجهد وضغوط السحب/الطرد وحرارة الملفات والجسم.
+      </div>
+
+      <div class="section-subtitle" style="margin-top: 14px;">أولاً: حاسبة تقدير التيار التشغيلي ومقارنة القراءة الفعلية</div>
+      <div class="grid-3">
+        <div class="form-group">
+          <label for="compCalcType">نوع الضاغط / التطبيق</label>
+          <select id="compCalcType" onchange="calcCompressorAmp()">
+            <option value="recip_1ph">ترددي أحادي الوجه 220V (ثلاجة/فريزر/شباك)</option>
+            <option value="rotary_1ph">روتاري / سبليت 220V (تكييف)</option>
+            <option value="scroll_3ph">سكرول / ترددي ثلاثي الوجه 380V (غرف/تجاري)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="compCalcHp">القدرة (حصان)</label>
+          <select id="compCalcHp" onchange="calcCompressorAmp()">
+            <option value="0.25">1/4 حصان</option>
+            <option value="0.50">1/2 حصان</option>
+            <option value="1.00">1 حصان</option>
+            <option value="1.50" selected="">1.5 حصان</option>
+            <option value="2.00">2 حصان</option>
+            <option value="3.00">3 حصان</option>
+            <option value="5.00">5 حصان</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="measuredAmpInput">الأمبير المقاس فعلياً (اختياري)</label>
+          <input type="number" id="measuredAmpInput" step="0.1" min="0" placeholder="مثال: 7.2" oninput="calcCompressorAmp()">
+        </div>
+      </div>
+
+      <div id="compAmpResultBox" class="output-box" style="display: block;">*تقدير استرشادي للتيار التشغيلي:*<br>• *القدرة:* 1.5 حصان | *النطاق الاسترشادي التقريبي:* 5.9 – 8.5 أمبير<br>• *ملاحظة:* تقدير استرشادي لأحادي الوجه 220V — يرتفع مع ارتفاع الجهد/حرارة الطرد أو ضعف التبريد.</div>
+
+      <div class="section-subtitle" style="margin-top: 18px;">ثانياً: جدول قدرات الضواغط وأنواع المواتير (الكباسات) وأرقامها الاسترشادية</div>
+      <div class="filter-row">
+        <input type="text" id="compSpecsSearch" placeholder="ابحث بالقدرة (1/4, 1/2, 1.5, 3, 5 HP)، نوع الكباس، أو رقم موديل/سلسلة (مثل Danfoss/Secop, Bristol, GMCC, Copeland)..." oninput="renderCompressorSpecsTable()">
+        <select id="compSpecsTypeFilter" onchange="renderCompressorSpecsTable()">
+          <option value="all">الكل (زانوسي + المواتير/الكباسات)</option>
+          <option value="zanussi">ضواغط زانوسي (Zanussi) بأرقامها وقدرتها</option>
+          <option value="motors_hp">أرقام المواتير / الكباسات وقدراتها</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>القدرة</th>
+              <th>نوع الموتور / الكباس</th>
+              <th>أرقام / سلاسل استرشادية شائعة</th>
+              <th>الفريون / الجهد</th>
+              <th>ملاحظة القدرة والفحص</th>
+            </tr>
+          </thead>
+          <tbody id="compressorSpecsTableBody"><tr><td><span class="code-pill">1/6 حصان (LBP)</span></td><td><strong>ضاغط زانوسي (Zanussi) - هيرميتيك</strong></td><td>Zanussi HTK60AA / HTK65AA / ZEM60 / ZEM65</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/6 حصان — راجع الكود الكامل على شاسيه الكباس وتطابق التطبيق (ثلاجة/فريزر).</td></tr><tr><td><span class="code-pill">1/5 حصان (LBP)</span></td><td><strong>ضاغط زانوسي (Zanussi) - هيرميتيك</strong></td><td>Zanussi HTK70AA / HTK75AA / ZEM70 / ZEM75</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/5 حصان — قِس مقاومة الملفات C-R-S وتأكد من سلامة الريليه والأوفرلود.</td></tr><tr><td><span class="code-pill">1/4 حصان (LBP)</span></td><td><strong>ضاغط زانوسي (Zanussi) - هيرميتيك</strong></td><td>Zanussi HTK80AA / HTK85AA / HTK90AA / ZEM80 / ZEM85</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/4 حصان — شائع في الثلاجات المنزلية؛ راقب الأمبير وضغط السحب والاستقرار.</td></tr><tr><td><span class="code-pill">1/3 حصان (LBP)</span></td><td><strong>ضاغط زانوسي (Zanussi) - هيرميتيك</strong></td><td>Zanussi HTK95AA / HTK105AA / GVM66AA / GVM75AA</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/3 حصان — مناسب للأحجام الأكبر/التجميد الخفيف حسب موديل الكباس.</td></tr><tr><td><span class="code-pill">1/2 حصان (LBP / MBP)</span></td><td><strong>ضاغط زانوسي (Zanussi) - هيرميتيك تجاري</strong></td><td>Zanussi GVM80AA / GVM90AA / GL90AA / GL99AA</td><td>220–240V / R134a أو R404A</td><td>قدرة 1/2 حصان — راقب تبديد الحرارة، نظافة المكثف، وشحنة الفريون بدقة.</td></tr><tr><td><span class="code-pill">1/6 حصان</span></td><td><strong>موتور / كباس تبريد هيرميتيك</strong></td><td>Secop/Danfoss TL2.5G / TLES4F، Embraco FF6HBK / EM2X، Tecumseh AE4430Y</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/6 حصان — قارن القدرة بالواط/BTU عند درجة التبخير المطلوبة.</td></tr><tr><td><span class="code-pill">1/5 حصان</span></td><td><strong>موتور / كباس تبريد هيرميتيك</strong></td><td>Secop/Danfoss TL3G / TLES5.7KK، Embraco FF7.5HBK / EM3S، Tecumseh AE4440Y</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/5 حصان — راقب الأمبير وحرارة خط الطرد والريليه/الأوفرلود.</td></tr><tr><td><span class="code-pill">1/4 حصان</span></td><td><strong>موتور / كباس تبريد هيرميتيك</strong></td><td>Secop/Danfoss TL4G / TLES7KK، Embraco FF8.5HBK / FFI12HBX، Tecumseh AE4450Y / TH1368Y</td><td>220–240V / R134a أو R600a</td><td>قدرة 1/4 حصان — تأكد من مطابقة نوع الفريون والزيت والكابيلاري.</td></tr><tr><td><span class="code-pill">1/3 حصان</span></td><td><strong>موتور / كباس تبريد هيرميتيك</strong></td><td>Secop/Danfoss FR8.5G / SC10G، Embraco NEU6210Z / NEK6212Z، Tecumseh CAE2417Z</td><td>220–240V / R134a أو R404A</td><td>قدرة 1/3 حصان — راقب التيار التشغيلي وضغط السحب عند استقرار الدائرة.</td></tr><tr><td><span class="code-pill">1/2 حصان</span></td><td><strong>موتور / كباس تبريد وتجميد</strong></td><td>Secop/Danfoss SC12G / SC15G / SC18G، Embraco NJ9226GK / NEK6217Z، Tecumseh AJ2464Z</td><td>220–240V / R134a أو R404A</td><td>قدرة 1/2 حصان — راقب كفاءة الكوندنسر، المروحة، وضبط الشحنة.</td></tr><tr><td><span class="code-pill">3/4 – 1 حصان</span></td><td><strong>موتور / كباس تكييف روتاري</strong></td><td>GMCC/Toshiba KSG102 / KSN120 / KSN140، LG QK164 / QA180، Rechi 39V220 / 44V260</td><td>220–240V / R22 أو R410A أو R32</td><td>قدرة 3/4 إلى 1 حصان — افحص كاباسيتور التشغيل وضغوط السحب/الطرد.</td></tr><tr><td><span class="code-pill">1.5 – 2 حصان</span></td><td><strong>موتور / كباس تكييف روتاري وترددي</strong></td><td>GMCC KSG180 / KSN210 / KSM240، LG QP222 / QP242، Copeland CR22 / CR32</td><td>220–240V / R22 أو R410A</td><td>قدرة 1.5 إلى 2 حصان — راقب الأمبير وسخونة المكثف والضاغط في الذروة.</td></tr><tr><td><span class="code-pill">3 حصان</span></td><td><strong>موتور / كباس سكرول وترددي</strong></td><td>Copeland Scroll ZR36 / ZR42 / ZB29، Danfoss SM32 / SM36 / SZ038</td><td>220V أو 380V / R22 أو R410A أو R404A</td><td>قدرة 3 حصان — تأكد من اتجاه الدوران واتزان التيار في الـ 3 فاز.</td></tr><tr><td><span class="code-pill">5 حصان</span></td><td><strong>موتور / كباس سكرول وترددي</strong></td><td>Copeland Scroll ZR61 / ZR68 / ZB45، Danfoss SM56 / SM61 / SZ066</td><td>380V (3-Ph شائع) / R22 أو R410A أو R404A</td><td>قدرة 5 حصان — راقب حماية الفازات، الكونتاكتور، وقدرة التبريد بالواط/BTU.</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="section-subtitle" style="margin-top: 18px;">ثالثاً: جدول مرجعي سريع للضواغط ونقاط الفحص العملي</div>
+      <div class="filter-row">
+        <input type="text" id="compSearch" placeholder="ابحث بنوع الضاغط، الجهد، الفريون، أو نقطة الفحص..." oninput="renderCompressorsTable()">
+        <select id="compCategoryFilter" onchange="renderCompressorsTable()">
+          <option value="all">كل الفئات</option>
+          <option value="hermetic">هيرميتيك / ثلاجات وفريزر</option>
+          <option value="ac">تكييف (روتاري / ترددي / إنفرتر)</option>
+          <option value="commercial">غرف تبريد وتجميد / تجاري</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>الفئة / النوع</th>
+              <th>الجهد / الفريون</th>
+              <th>تيار استرشادي تقريبي</th>
+              <th>أهم نقاط الفحص العملي في الميدان</th>
+            </tr>
+          </thead>
+          <tbody id="compressorsTableBody"><tr><td><strong>ضاغط هيرميتيك ثلاجات ومبردات مياه</strong></td><td>220V–240V / R134a أو R600a</td><td><span class="code-pill">~ 0.8 – 2.2 A (حسب القدرة والحمل)</span></td><td>قِس مقاومة ملفات التشغيل والتقويم (C-R-S)، افحص العزل للأرضي، وتأكد من كفاءة الريليه والأوفرلود وسلامة التهوية.</td></tr><tr><td><strong>ضاغط ديب فريزر وتجميد منزلي/تجاري صغير</strong></td><td>220V–240V / R134a أو R404A أو R290</td><td><span class="code-pill">~ 1.2 – 4.5 A (حسب القدرة والحمل)</span></td><td>راقب الأمبير عند بدء التجميد وبعد الاستقرار، وتأكد من عدم وجود رطوبة أو انسداد جزئي أو شحنة زائدة.</td></tr><tr><td><strong>ضاغط تكييف روتاري / ترددي شباك وسبليت (1 – 2.25 حصان)</strong></td><td>220V–240V / R22 أو R410A</td><td><span class="code-pill">~ 4.5 – 12.5 A (حسب القدرة والجهد)</span></td><td>افحص كاباسيتور التشغيل والتقويم، نظافة المكثف والملفات، اتجاه وسرعة المروحة، وضغط السحب/الطرد.</td></tr><tr><td><strong>ضاغط تكييف ترددي / سكرول (3 – 5 حصان)</strong></td><td>220V (1-Ph) أو 380V (3-Ph) / R22 أو R410A</td><td><span class="code-pill">~ 8 – 24 A (يختلف حسب فازة واحدة أو 3 فاز)</span></td><td>في الـ 3 فاز تأكد من اتزان التيار بين الفازات الثلاث (L1, L2, L3)، وسلامة الكونتاكتور، الأوفرلود، وحماية الفازات.</td></tr><tr><td><strong>وحدة تكثيف غرف تبريد وتجميد تجارية</strong></td><td>220V أو 380V / R404A أو R448A/R449A أو R22</td><td><span class="code-pill">حسب قدرة الضاغط ودرجة التبخير/التكثيف</span></td><td>راقب سخونة خط الطرد، كفاءة مكثف الغرفة، إذابة الثلج (Defrost)، وتوازن السحب والطرد مع حرارة الغرفة.</td></tr><tr><td><strong>ضاغط إنفرتر (DC / BLDC Inverter)</strong></td><td>حسب قدرة الوحدة / R410A أو R32</td><td><span class="code-pill">متغير حسب سرعة الضاغط والحمل</span></td><td>لا تعتمد على رقم أمبير ثابت؛ راقب استقرار التردد/السرعة، كارت الإنفرتر، حساسات الحرارة، وسلامة التوصيلات.</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="alert-box">
+        <strong>تنبيه سلامة:</strong> راقب دائماً سخونة الكاباسيتور، الريليه/الأوفرلود، الكونتاكتور، وأطراف التوصيل (الترمنال)؛ ارتفاع الأمبير مع صوت أنين أو فصل متكرر على الأوفرلود يستدعي فصل الكهرباء فوراً وفحص العزل/الملفات وميكانيكية الكباس.
+      </div>
+    </div>
+
+    <footer>
+      للتواصل المباشر عبر واتساب بيزنس: <span dir="ltr">01004549631</span> • جميع البيانات تُحفظ محلياً على جهازك
+    </footer>
+  </div>
+
+  <div id="toast" class="toast">تم التنفيذ</div>
+
+  <script>
+    const DEFAULT_WHATSAPP_PHONE = '201004549631';
+    const ALL_TABS = ['intake', 'coldroom', 'capillary', 'log', 'bearings', 'washercodes', 'accodes', 'compressors'];
+    let lastCalcReport = '';
+
+    function switchTab(tab, btn) {
+      var targetTab = String(tab || '').trim();
+      if (ALL_TABS.indexOf(targetTab) === -1) return;
+
+      var allBtns = document.querySelectorAll('.tab-btn');
+      for (var i = 0; i < allBtns.length; i++) {
+        allBtns[i].classList.remove('active');
+      }
+
+      var activeBtn = btn || document.getElementById('btn-tab-' + targetTab);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+
+      for (var j = 0; j < ALL_TABS.length; j++) {
+        var t = ALL_TABS[j];
+        var el = document.getElementById('tab-' + t);
+        if (el) {
+          if (t === targetTab) {
+            el.classList.remove('hidden');
+          } else {
+            el.classList.add('hidden');
+          }
+        }
+      }
+
+      if (targetTab === 'log') {
+        if (typeof renderLog === 'function') renderLog();
+      } else if (targetTab === 'bearings') {
+        if (typeof renderBearingsTable === 'function') renderBearingsTable();
+        if (typeof renderCouplersTable === 'function') renderCouplersTable();
+      } else if (targetTab === 'washercodes') {
+        if (typeof renderWasherCodesTable === 'function') renderWasherCodesTable();
+      } else if (targetTab === 'accodes') {
+        if (typeof renderAcCodesTable === 'function') renderAcCodesTable();
+      } else if (targetTab === 'compressors') {
+        if (typeof calcCompressorAmp === 'function') calcCompressorAmp();
+        if (typeof renderCompressorSpecsTable === 'function') renderCompressorSpecsTable();
+        if (typeof renderCompressorsTable === 'function') renderCompressorsTable();
+      } else if (targetTab === 'capillary') {
+        if (typeof showRefGuide === 'function') showRefGuide();
+        if (typeof showCarrierRecipGuide === 'function') showCarrierRecipGuide();
+      }
+    }
+
+    function bindTabButtons() {
+      ALL_TABS.forEach(function(t) {
+        var b = document.getElementById('btn-tab-' + t);
+        if (b) {
+          b.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchTab(t, b);
+          });
+        }
+      });
+    }
+
+    function formatEgyptWhatsApp(raw) {
+      var digits = String(raw || '').replace(/[^0-9]/g, '');
+      if (!digits) return DEFAULT_WHATSAPP_PHONE;
+      if (digits.indexOf('01') === 0 && digits.length === 11) {
+        digits = '2' + digits;
+      }
+      return digits;
+    }
+
+    function updateWhatsappDirectLink() {
+      var inputEl = document.getElementById('consultantPhone');
+      var formatted = formatEgyptWhatsApp(inputEl ? inputEl.value : '');
+      var directUrl = 'https://wa.me/' + formatted;
+      var greetingText = encodeURIComponent('السلام عليكم بشمهندس محمد، معايا استشارة فنية');
+      var linkEl = document.getElementById('directWhatsappMainLink');
+      var greetEl = document.getElementById('directWhatsappGreetingLink');
+      var dispEl = document.getElementById('displayWhatsappNum');
+      var urlDispEl = document.getElementById('displayWhatsappUrl');
+      if (linkEl) {
+        linkEl.href = directUrl;
+      }
+      if (greetEl) {
+        greetEl.href = directUrl + '?text=' + greetingText;
+      }
+      if (dispEl) {
+        var clean = String(inputEl && inputEl.value ? inputEl.value.trim() : '01004549631');
+        dispEl.textContent = clean || '01004549631';
+      }
+      if (urlDispEl) {
+        urlDispEl.textContent = directUrl;
+      }
+    }
+
+    function setupDynamicManifest() {
+      try {
+        var manifestObj = {
+          name: 'مساعد الفني الاستشاري المتكامل - محمد عصمت',
+          short_name: 'مساعد الفني',
+          start_url: './',
+          display: 'standalone',
+          background_color: '#f4f7fa',
+          theme_color: '#0f4c81',
+          lang: 'ar',
+          dir: 'rtl'
+        };
+        var blob = new Blob([JSON.stringify(manifestObj)], { type: 'application/json' });
+        var mLink = document.getElementById('dynamicManifestLink');
+        if (mLink) {
+          mLink.href = URL.createObjectURL(blob);
+        }
+      } catch (e) {}
+    }
+
+    function installDesktopAppGuide() {
+      setupDynamicManifest();
+      downloadHtmlFile();
+      showToast('تم تحميل الملف — افتحه في Chrome/Edge ثم اختر "تثبيت التطبيق" أو "إنشاء اختصار" على سطح المكتب ✅');
+    }
+
+    function copyDirectWhatsappLink() {
+      var inputEl = document.getElementById('consultantPhone');
+      var formatted = formatEgyptWhatsApp(inputEl ? inputEl.value : '');
+      var directUrl = 'https://wa.me/' + formatted;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(directUrl).then(function() {
+          showToast('تم نسخ رابط واتساب الأعمال ✅');
+        }).catch(function() {
+          fallbackCopy(directUrl);
+        });
+      } else {
+        fallbackCopy(directUrl);
+      }
+    }
+
+    function savePhone() {
+      var inputEl = document.getElementById('consultantPhone');
+      var formatted = formatEgyptWhatsApp(inputEl ? inputEl.value : '');
+      if (inputEl) inputEl.value = formatted;
+      try {
+        localStorage.setItem('consultant_phone', formatted);
+      } catch (e) {}
+      updateWhatsappDirectLink();
+      setupDynamicManifest();
+      showToast('تم حفظ رقم الواتساب وتحديث الرابط ✅');
+    }
+
+    function getWhatsAppBaseUrl() {
+      var inputEl = document.getElementById('consultantPhone');
+      var formatted = formatEgyptWhatsApp(inputEl ? inputEl.value : '');
+      return 'https://wa.me/' + formatted + '?text=';
+    }
+
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) return;
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() {
+        t.classList.remove('show');
+      }, 2500);
+    }
+
+    function copyText(elementId) {
+      var el = document.getElementById(elementId);
+      if (!el) return;
+      var text = el.innerText;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          showToast('تم نسخ النص بنجاح ✅');
+        }).catch(function() {
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('تم نسخ النص بنجاح ✅');
+      } catch (e) {
+        showToast('تعذر النسخ تلقائياً');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function buildIntakeString() {
+      var name = (document.getElementById('clientName').value || '').trim() || 'غير محدد';
+      var equip = document.getElementById('equipType').value;
+      var brand = (document.getElementById('brandModel').value || '').trim() || 'غير محدد';
+      var service = document.getElementById('serviceType').value;
+      var problem = (document.getElementById('problemDesc').value || '').trim() || 'لم يُكتب وصف بعد';
+      var ref = (document.getElementById('refrigerant').value || '').trim() || '—';
+      var press = (document.getElementById('pressures').value || '').trim() || '—';
+      var amp = (document.getElementById('amperage').value || '').trim() || '—';
+      var temp = (document.getElementById('tempsCode').value || '').trim() || '—';
+
+      return '*بطاقة بيانات حالة / استشارة فنية*\n' +
+             '• *العميل:* ' + name + '\n' +
+             '• *النوع:* ' + equip + '\n' +
+             '• *الماركة/القدرة:* ' + brand + '\n' +
+             '• *الخدمة المطلوبة:* ' + service + '\n' +
+             '• *وصف المشكلة:* ' + problem + '\n' +
+             '• *القراءات الفنية:*\n' +
+             '  - الفريون: ' + ref + '\n' +
+             '  - الضغوط: ' + press + '\n' +
+             '  - الأمبير: ' + amp + '\n' +
+             '  - الحرارة/الكود: ' + temp;
+    }
+
+    function generateIntakeText() {
+      var txt = buildIntakeString();
+      var box = document.getElementById('intakeOutput');
+      box.innerText = txt;
+      box.style.display = 'block';
+      document.getElementById('intakeCopyRow').classList.remove('hidden');
+      showToast('تم تجهيز بطاقة الحالة');
+    }
+
+    function sendIntakeWhatsApp() {
+      var txt = buildIntakeString();
+      window.open(getWhatsAppBaseUrl() + encodeURIComponent(txt), '_blank');
+    }
+
+    function resetIntake() {
+      ['clientName', 'brandModel', 'problemDesc', 'refrigerant', 'pressures', 'amperage', 'tempsCode'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      document.getElementById('intakeOutput').style.display = 'none';
+      document.getElementById('intakeCopyRow').classList.add('hidden');
+      showToast('تم مسح الحقول');
+    }
+
+    function getLogsSafe() {
+      try {
+        var raw = localStorage.getItem('consultant_logs');
+        var parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function setLogsSafe(logs) {
+      try {
+        localStorage.setItem('consultant_logs', JSON.stringify(logs));
+      } catch (e) {}
+    }
+
+    function saveIntakeToLog() {
+      var name = (document.getElementById('clientName').value || '').trim() || 'عميل بدون اسم';
+      var equip = document.getElementById('equipType').value;
+      var service = document.getElementById('serviceType').value;
+      var summary = buildIntakeString();
+      var date = new Date().toLocaleDateString('ar-EG');
+
+      var logs = getLogsSafe();
+      logs.unshift({
+        id: Date.now(),
+        date: date,
+        name: name,
+        equip: equip,
+        service: service,
+        paid: false,
+        summary: summary
+      });
+      setLogsSafe(logs);
+      showToast('تم حفظ الحالة في السجل 🗂️');
+    }
+
+    function togglePaid(id) {
+      var logs = getLogsSafe();
+      for (var i = 0; i < logs.length; i++) {
+        if (logs[i].id === id) {
+          logs[i].paid = !logs[i].paid;
+          break;
+        }
+      }
+      setLogsSafe(logs);
+      renderLog();
+    }
+
+    function deleteLog(id) {
+      var logs = getLogsSafe().filter(function(item) {
+        return item.id !== id;
+      });
+      setLogsSafe(logs);
+      renderLog();
+      showToast('تم حذف الحالة');
+    }
+
+    function renderLog() {
+      var container = document.getElementById('logContainer');
+      if (!container) return;
+      var logs = getLogsSafe();
+      if (!logs.length) {
+        container.innerHTML = '<p style="color: var(--muted); text-align: center;">لا توجد حالات محفوظة بعد. املأ "بطاقة الحالة" واضغط "حفظ في السجل".</p>';
+        return;
+      }
+
+      container.innerHTML = logs.map(function(item) {
+        return '<div class="log-item">' +
+          '<div class="log-header">' +
+            '<div>' +
+              '<strong>' + item.name + '</strong> <span style="color: var(--muted); font-size: 0.82rem;">(' + item.date + ')</span>' +
+              '<div style="font-size: 0.84rem; color: var(--primary);">' + item.equip + ' — ' + item.service + '</div>' +
+            '</div>' +
+            '<div style="display: flex; gap: 6px; align-items: center;">' +
+              '<span class="badge ' + (item.paid ? 'badge-paid' : 'badge-pending') + '" style="cursor: pointer;" onclick="togglePaid(' + item.id + ')">' +
+                (item.paid ? 'مدفوع ✅' : 'معلق ⏳ (اضغط للتأكيد)') +
+              '</span>' +
+              '<button type="button" class="btn btn-danger" onclick="deleteLog(' + item.id + ')">حذف</button>' +
+            '</div>' +
+          '</div>' +
+          '<details style="font-size: 0.85rem; margin-top: 6px;">' +
+            '<summary style="cursor: pointer; color: var(--accent); font-weight: 600;">عرض التفاصيل والقراءات</summary>' +
+            '<pre style="white-space: pre-wrap; background: #fff; padding: 8px; border-radius: 6px; border: 1px solid #e5e7eb; margin-top: 6px;">' + item.summary + '</pre>' +
+          '</details>' +
+        '</div>';
+      }).join('');
+    }
+
+    function exportLogText() {
+      var logs = getLogsSafe();
+      if (!logs.length) {
+        showToast('السجل فارغ حالياً');
+        return;
+      }
+      var fullText = logs.map(function(l, i) {
+        return '--- حالة #' + (i + 1) + ' (' + l.date + ') [' + (l.paid ? 'مدفوع' : 'معلق') + '] ---\n' + l.summary;
+      }).join('\n\n');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullText).then(function() {
+          showToast('تم نسخ سجل الحالات بالكامل ✅');
+        }).catch(function() {
+          fallbackCopy(fullText);
+        });
+      } else {
+        fallbackCopy(fullText);
+      }
+    }
+
+    function calculateColdRoom() {
+      var l = parseFloat(document.getElementById('roomLength').value) || 0;
+      var w = parseFloat(document.getElementById('roomWidth').value) || 0;
+      var h = parseFloat(document.getElementById('roomHeight').value) || 0;
+      var type = document.getElementById('roomType').value;
+      var ambientFactor = parseFloat(document.getElementById('ambientTemp').value);
+      var insFactor = parseFloat(document.getElementById('insulation').value);
+      var loadFactor = parseFloat(document.getElementById('productLoad').value);
+      var runHours = parseFloat(document.getElementById('runHours').value);
+      var refType = document.getElementById('coldRefType').value;
+
+      if (l <= 0 || w <= 0 || h <= 0) {
+        showToast('أدخل أبعاداً صحيحة للغرفة');
+        return;
+      }
+
+      var volume = l * w * h;
+      var baseKw24h = 0.10;
+      var hpFactor = 1.3;
+      var typeLabel = 'تبريد خضار/فواكه (+4°C إلى +8°C)';
+      var evapTemp = '-4°C إلى -6°C';
+
+      if (type === 'chiller_low') {
+        baseKw24h = 0.115;
+        hpFactor = 1.45;
+        typeLabel = 'تبريد ألبان/لحوم طازجة (0°C إلى +2°C)';
+        evapTemp = '-8°C إلى -10°C';
+      } else if (type === 'freezer') {
+        baseKw24h = 0.165;
+        hpFactor = 2.15;
+        typeLabel = 'تجميد قياسي (-18°C إلى -22°C)';
+        evapTemp = '-25°C إلى -28°C';
+      } else if (type === 'blast') {
+        baseKw24h = 0.28;
+        hpFactor = 2.85;
+        typeLabel = 'تجميد عميق / صدمة (-30°C فأقل)';
+        evapTemp = '-35°C إلى -40°C';
+      }
+
+      var dailyLoadKw = volume * baseKw24h * ambientFactor * insFactor * loadFactor;
+      var unitCapacityKw = dailyLoadKw * (24 / runHours);
+      var unitBtu = Math.round(unitCapacityKw * 3412.14);
+      var estHp = (unitCapacityKw * hpFactor).toFixed(1);
+
+      document.getElementById('resVolume').innerText = volume.toFixed(1) + ' م³';
+      document.getElementById('resKw').innerText = unitCapacityKw.toFixed(2) + ' kW';
+      document.getElementById('resHp').innerText = estHp + ' HP';
+      document.getElementById('resBtu').innerText = unitBtu.toLocaleString('en-US') + ' BTU/hr';
+      document.getElementById('resEvapTemp').innerText = evapTemp;
+
+      lastCalcReport = '*تقرير تقديري لمواصفات غرفة تبريد/تجميد*\n' +
+                       '• *الأبعاد الداخلية:* ' + l + 'م × ' + w + 'م × ' + h + 'م (الحجم: ' + volume.toFixed(1) + ' م³)\n' +
+                       '• *التطبيق ودرجة الحرارة:* ' + typeLabel + '\n' +
+                       '• *ساعات التشغيل التصميمية:* ' + runHours + ' ساعة/يوم\n' +
+                       '• *قدرة التبريد المطلوبة للوحدة:* ' + unitCapacityKw.toFixed(2) + ' kW (' + unitBtu.toLocaleString('en-US') + ' BTU/hr)\n' +
+                       '• *درجة التبخير التصميمية:* ' + evapTemp + '\n' +
+                       '• *الفريون المقترح:* ' + refType + '\n' +
+                       '• *القدرة الاسترشادية التقريبية:* حوالي ' + estHp + ' حصان (تُحدد بدقة من كتالوج الضاغط عند درجة التبخير المذكورة)\n' +
+                       '_ملاحظة: تقدير مبدئي للمقارنة قبل إعداد كراسة المواصفات النهائية._';
+
+      document.getElementById('calcOutput').innerText = lastCalcReport;
+      document.getElementById('calcResults').classList.remove('hidden');
+      showToast('تم حساب مواصفات الغرفة');
+    }
+
+    function sendCalcWhatsApp() {
+      if (!lastCalcReport) calculateColdRoom();
+      if (lastCalcReport) {
+        window.open(getWhatsAppBaseUrl() + encodeURIComponent(lastCalcReport), '_blank');
+      }
+    }
+
+    function showRefGuide() {
+      var val = document.getElementById('refSelect').value;
+      var pEl = document.getElementById('refPressureVal');
+      var nEl = document.getElementById('refNoteVal');
+
+      var data = {
+        r134_fridge: ['8 – 14 PSI', 'سحب R134a في الثلاجات ومبردات المياه (حسب حرارة الجو)'],
+        r134_freezer: ['0 – 5 PSI', 'سحب R134a في الديب فريزر والتجميد العميق'],
+        r290_comm: ['15 – 28 PSI (تبريد) / 5 – 12 PSI (تجميد)', 'فريون R290 حساس جداً للشحنة بالجرامات والتهوية'],
+        r404_freezer: ['18 – 28 PSI', 'سحب R404A في التجميد التجاري والغرف'],
+        r22_ac: ['58 – 68 PSI', 'سحب R22 في التكييف عند حرارة جو 32-38°C'],
+        carrier_r22_recip_15: ['58 – 68 PSI (سحب)', 'كارير R22 كباس ترددي 1.5 حصان — راقب ارتفاع الطرد والأمبير عند ضعف التبريد أو اتساخ المكثف'],
+        carrier_r22_recip_30: ['58 – 68 PSI (سحب)', 'كارير R22 كباس ترددي 3 حصان — راقب ضغط الطرد وحرارة الكباس والملفات/الأمبير'],
+        carrier_r22_recip_50: ['58 – 68 PSI (سحب)', 'كارير R22 كباس ترددي 5 حصان — راقب الطرد والكونتاكتور/الأوفرلود وتهوية المكثف'],
+        r410_ac: ['115 – 130 PSI', 'سحب R410A في التكييف (يُشحن سائل فقط)']
+      };
+
+      if (data[val] && pEl && nEl) {
+        pEl.innerText = data[val][0];
+        nEl.innerText = data[val][1];
+      }
+    }
+
+    function estimateCapillary() {
+      var hp = parseFloat(document.getElementById('compHp').value);
+      var dia = parseFloat(document.getElementById('capDiameter').value);
+      var app = document.getElementById('capApp').value;
+      var ref = document.getElementById('capRef').value;
+
+      var baseLength = 3.0 * (0.25 / hp);
+      var diaRatio = Math.pow(dia / 0.031, 4.6);
+      var estLength = baseLength * diaRatio;
+
+      if (app === 'freezer') estLength *= 1.12;
+      if (ref === 'R404A') estLength *= 0.88;
+      if (ref === 'R290') estLength *= 0.95;
+
+      var minL = Math.max(1.2, (estLength * 0.92)).toFixed(2);
+      var maxL = Math.max(1.5, (estLength * 1.08)).toFixed(2);
+
+      var box = document.getElementById('capResultBox');
+      box.innerText = '*تقدير استرشادي للكابيلاري:*\n' +
+                      '• *الضاغط:* ' + hp + ' حصان | *الفريون:* ' + ref + ' | *القطر:* ' + dia + ' بوصة\n' +
+                      '• *نطاق الطول المقترح للبداية:* من ' + minL + ' متر إلى ' + maxL + ' متر\n' +
+                      '• *التوصية العملية:* ابدأ بالطول الأكبر واختبر ممانعة الدائرة على العداد (Impedance PSI) قبل اللحام النهائي لضبط التوازن بدقة.';
+      box.style.display = 'block';
+      showToast('تم حساب الطول الاسترشادي للكابيلاري');
+    }
+
+
+    const WASHING_MACHINE_BEARINGS = [
+      {
+        brand: 'Bosch / Siemens (بوش / سيمنز)',
+        cat: 'front_load',
+        spec: 'أمامي تحميل أمامي (7 - 9 كجم شائع)',
+        inner: '6205 / 6206',
+        outer: '6204 / 6205',
+        seal: '35×62×10 أو 37×66×10 (حسب الموديل)',
+        notes: 'تأكد من حالة فحمات الموتور أو درايفر الإنفرتر ونظافة بيت البلي قبل التركيب.'
+      },
+      {
+        brand: 'Ariston / Indesit (أريستون / إندست)',
+        cat: 'front_load',
+        spec: 'أمامي تحميل أمامي (6 - 9 كجم شائع)',
+        inner: '6205 / 6206',
+        outer: '6204 / 6205',
+        seal: '30×52×8.5 أو 37×66×10 (حسب الموديل)',
+        notes: 'راجع رقم الموديل على ملصق الباب وتأكد من استقامة الصليب وعدم وجود تآكل على جلبة العمود.'
+      },
+      {
+        brand: 'Zanussi / Electrolux (زانوسي / إلكترولوكس)',
+        cat: 'front_load',
+        spec: 'أمامي تحميل أمامي (7 - 9 كجم شائع)',
+        inner: '6205 / 6206',
+        outer: '6204 / 6205',
+        seal: '35×58/62×10 أو 37×66×10 (حسب الموديل)',
+        notes: 'افحص مانع التسريب والسوكت/الجلدة المحيطة بالباب مع فحص البلي عند وجود صوت عصر.'
+      },
+      {
+        brand: 'Sharp / Kiriazi (شارب / كريازي)',
+        cat: 'front_load',
+        spec: 'أمامي تحميل أمامي (7 - 8 كجم شائع)',
+        inner: '6205',
+        outer: '6204',
+        seal: 'أويل سيل حلة حسب الموديل والمقاس الفعلي',
+        notes: 'طابق مقاس العمود الداخلي والخارجي للبلي القديم قبل الشراء.'
+      },
+      {
+        brand: 'Samsung (سامسونج) - فوق أوتوماتيك',
+        cat: 'top_load_std',
+        spec: 'حوض واحد فوق أوتوماتيك (7 - 13 كجم)',
+        inner: '6205 / 6206',
+        outer: '6204 / 6205',
+        seal: 'أويل سيل جيربوكس/حوض حسب الموديل',
+        notes: 'وجود صدأ أو أثر مياه أسفل الجيربوكس غالباً يعني تلف أويل سيل الميه وتأثر البلي.'
+      },
+      {
+        brand: 'LG (إل جي) - فوق أوتوماتيك تقليدي / Belt',
+        cat: 'top_load_std',
+        spec: 'حوض واحد (7 - 12 كجم)',
+        inner: '6205 / 6206',
+        outer: '6204 / 6205',
+        seal: 'أويل سيل حوض حسب الموديل',
+        notes: 'افحص كاوتش/جلبة مانع التسريب وحرية حركة المحور الرأسي.'
+      },
+      {
+        brand: 'LG (إل جي) - Direct Drive',
+        cat: 'top_load_lg_dd',
+        spec: 'فوق أوتوماتيك (7 - 10 كجم شائع)',
+        inner: '6205 (2RS)',
+        outer: '6206 (2RS)',
+        seal: 'أويل سيل خاص بعمود الدفع المباشر (حسب الموديل)',
+        notes: 'تأكد من سلامة جلبة/شافت الحلة والسنون وعدم وجود تأكل أو تسريب مياه على البلي.'
+      },
+      {
+        brand: 'LG (إل جي) - Front Load',
+        cat: 'front_load',
+        spec: 'أمامي تحميل أمامي (7 - 8 كجم شائع)',
+        inner: '6206',
+        outer: '6205',
+        seal: '37×66×9.5 / 12 (حسب الموديل)',
+        notes: 'افحص صليب الحلة (Spider) جيداً للتأكد من عدم وجود تآكل أو التواء.'
+      },
+      {
+        brand: 'LG (إل جي) - Front Load كبير',
+        cat: 'front_load',
+        spec: 'أمامي سعات أكبر (9 - 12 كجم شائع)',
+        inner: '6306 / 6207',
+        outer: '6206 / 6305',
+        seal: '42×72×10 / 12 (حسب الموديل)',
+        notes: 'يُفضل استبدال البلي والأويل سيل معاً بعد تنظيف بيت البلي من أي بقايا ماء أو صابون.'
+      },
+      {
+        brand: 'Samsung (سامسونج) - Front Load',
+        cat: 'front_load',
+        spec: 'أمامي شائع (7 - 8 كجم)',
+        inner: '6205',
+        outer: '6204',
+        seal: '35×65.55×10 / 12 (حسب الموديل)',
+        notes: 'راجع رقم الموديل المدون على الباب أو الظهر لتأكيد مقاس الإويل سيل بدقة.'
+      },
+      {
+        brand: 'Samsung (سامسونج) - Front Load كبير',
+        cat: 'front_load',
+        spec: 'أمامي سعات أكبر (8 - 10.5 كجم)',
+        inner: '6206',
+        outer: '6205',
+        seal: '37×66×10 / 12 (حسب الموديل)',
+        notes: 'تأكد من نظافة مكان جلوس الإويل سيل وعدم وجود خدوش على عمود الصليب.'
+      },
+      {
+        brand: 'Toshiba (توشيبا) - فوق أوتوماتيك',
+        cat: 'top_load_std',
+        spec: 'حوض واحد شائع (7 - 11 كجم)',
+        inner: '6205',
+        outer: '6204 / 6205',
+        seal: 'أويل سيل حوض توشيبا حسب الموديل',
+        notes: 'غالباً ما يرتبط تلف البلي بتسريب من أويل سيل الجيربوكس أو تآكل عمود الحلة.'
+      },
+      {
+        brand: 'Kiriazi / Zanussi / Ariston / Sharp',
+        cat: 'front_load',
+        spec: 'أمامي فئات متعددة (حسب الموديل)',
+        inner: '6205 / 6206',
+        outer: '6204 / 6205',
+        seal: 'حسب موديل الحلة (يُطابق بالرقم/المقاس)',
+        notes: 'في بعض الموديلات تكون الحلة مبرشمة؛ راجع طريقة فك الحلة وتجهيز مانع التسريب.'
+      },
+
+    ];
+
+    function renderBearingsTable() {
+      var tbody = document.getElementById('bearingsTableBody');
+      if (!tbody) return;
+
+      var qEl = document.getElementById('bearingSearch');
+      var catEl = document.getElementById('bearingCategoryFilter');
+      var q = (qEl && qEl.value ? qEl.value.trim().toLowerCase() : '');
+      var cat = (catEl && catEl.value ? catEl.value : 'all');
+
+      var filtered = WASHING_MACHINE_BEARINGS.filter(function(item) {
+        var catMatch = (cat === 'all' || item.cat === cat);
+        if (!catMatch) return false;
+        if (!q) return true;
+        var hay = (item.brand + ' ' + item.spec + ' ' + item.inner + ' ' + item.outer + ' ' + item.seal + ' ' + item.notes).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:var(--muted); padding:16px;">لا توجد نتائج مطابقة للبحث الحالي.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(function(item) {
+        return '<tr>' +
+          '<td><strong>' + item.brand + '</strong></td>' +
+          '<td>' + item.spec + '</td>' +
+          '<td><span class="code-pill">' + item.inner + '</span></td>' +
+          '<td><span class="code-pill">' + item.outer + '</span></td>' +
+          '<td>' + item.seal + '</td>' +
+          '<td>' + item.notes + '</td>' +
+        '</tr>';
+      }).join('');
+    }
+
+
+    function showCarrierRecipGuide() {
+      var sel = document.getElementById('carrierHpSelect');
+      var titleEl = document.getElementById('carrierHpTitle');
+      var detailEl = document.getElementById('carrierHpDetail');
+      if (!sel || !titleEl || !detailEl) return;
+
+      var hp = sel.value;
+      var info = {
+        '1.5': [
+          '1.5 حصان (1½ HP - كارير R22 ترددي)',
+          'سحب استرشادي R22: ~58–68 PSI | عند ارتفاع الطرد أو التيار افحص نظافة المكثف، كفاءة المروحة، الشحنة، وحالة صمامات/كباس R22.'
+        ],
+        '3.0': [
+          '3 حصان (3 HP - كارير R22 ترددي)',
+          'سحب استرشادي R22: ~58–68 PSI | راقب ضغط الطرد، الأمبير الفعلي، وحالة الكاباسيتور/الكونتاكتور وسلامة دائرة التبريد.'
+        ],
+        '5.0': [
+          '5 حصان (5 HP - كارير R22 ترددي)',
+          'سحب استرشادي R22: ~58–68 PSI | تحقق من اتزان الفازات/الجهد، الكونتاكتور، الأوفرلود، وتبديد حرارة المكثف في الأجواء الحارة.'
+        ]
+      };
+
+      if (info[hp]) {
+        titleEl.innerText = info[hp][0];
+        detailEl.innerText = info[hp][1];
+      }
+    }
+
+    const WASHING_MACHINE_CODES = [
+      // أعطال الفوق أوتوماتيك (Top Load) - شاملة
+      { brand: 'LG', type: 'top_load', code: 'OE (فوق أوتوماتيك)', fault: 'عدم طرد المياه أو بطء الصرف في الفوق أوتوماتيك', check: 'افحص طلمبة الصرف، خرطوم الطرد، فلتر الطلمبة، وسلامة مسار المياه.' },
+      { brand: 'LG', type: 'top_load', code: 'IE (فوق أوتوماتيك)', fault: 'تأخر أو عدم دخول المياه في الفوق أوتوماتيك', check: 'افحص ضغط المياه، مصفاة المدخل، صمام الدخول، وتوصيلاته.' },
+      { brand: 'LG', type: 'top_load', code: 'UE (فوق أوتوماتيك)', fault: 'عدم اتزان الحلة أو الملابس أثناء العصر في الفوق أوتوماتيك', check: 'رتّب الملابس بالتساوي، افحص اتزان الغسالة، وسوست/مساعدات الحلة.' },
+      { brand: 'LG', type: 'top_load', code: 'dE / dS (فوق أوتوماتيك)', fault: 'الغطاء العلوي مفتوح أو مشكلة في سويتش الغطاء/القفل', check: 'أغلق الغطاء بإحكام، افحص سويتش/قفل الباب العلوي وضفيرة الكارت.' },
+      { brand: 'LG', type: 'top_load', code: 'PE (فوق أوتوماتيك)', fault: 'عطل حساس مستوى المياه (Water Level Sensor) في الفوق أوتوماتيك', check: 'افحص حساس الليفل، الخرطوم الهوائي من الانسداد/التنفيس، وفيشة الكارت.' },
+      { brand: 'Samsung', type: 'top_load', code: '4E / 4C (فوق أوتوماتيك)', fault: 'مشكلة في دخول المياه في الغسالة الفوق أوتوماتيك', check: 'افحص ضغط المياه، الفلتر الشبكي، صمام الدخول، وأسلاكه.' },
+      { brand: 'Samsung', type: 'top_load', code: '5E / 5C (فوق أوتوماتيك)', fault: 'مشكلة في طرد/تصريف المياه في الفوق أوتوماتيك', check: 'نظّف فلتر الطلمبة، افحص خرطوم الصرف، وتأكد من عمل طلمبة الطرد.' },
+      { brand: 'Samsung', type: 'top_load', code: 'UE / UC (فوق أوتوماتيك)', fault: 'عدم اتزان الحلة أو اهتزاز أثناء العصر في الفوق أوتوماتيك', check: 'أعد توزيع الغسيل، افحص مستوى الأرضية، ومساعدات/سوست التعليق.' },
+      { brand: 'Samsung', type: 'top_load', code: 'dS / dC (فوق أوتوماتيك)', fault: 'مشكلة في غطاء الغسالة الفوق أوتوماتيك أو سويتش الأمان', check: 'افحص غلق الغطاء، سويتش/قفل الغطاء، وسلامة الضفيرة.' },
+      { brand: 'Samsung', type: 'top_load', code: '1E / 1C (فوق أوتوماتيك)', fault: 'مشكلة في حساس مستوى المياه في الفوق أوتوماتيك', check: 'افحص حساس الليفل، الخرطوم الهوائي، والفيشة.' },
+      { brand: 'Toshiba', type: 'top_load', code: 'E1 (فوق أوتوماتيك)', fault: 'مشكلة طرد/تصريف المياه في توشيبا فوق أوتوماتيك', check: 'افحص مسار الطرد، فلتر الطلمبة، وطلمبة/صمام الطرد.' },
+      { brand: 'Toshiba', type: 'top_load', code: 'E2 (فوق أوتوماتيك)', fault: 'الغطاء العلوي مفتوح أو عطل سويتش غطاء توشيبا', check: 'افحص الغطاء العلوي، سويتش الغطاء، وتوصيلات الأسلاك.' },
+      { brand: 'Toshiba', type: 'top_load', code: 'E4 / E5 (فوق أوتوماتيك)', fault: 'مشكلة دخول المياه أو حساس مستوى المياه في توشيبا', check: 'افحص مصدر المياه، الصمام، وحساس الليفل/الخرطوم الهوائي.' },
+      { brand: 'Toshiba', type: 'top_load', code: 'E7 / E9 (فوق أوتوماتيك)', fault: 'حماية أو خلل في حساس السرعة/الوزن أو التحكم في توشيبا', check: 'افحص حساس السرعة/الوزن، حركة الحلة، والضفيرة.' },
+      { brand: 'Sharp / Kiriazi / General', type: 'top_load', code: 'E1 / E2 / E3 / E4 (فوق أوتوماتيك)', fault: 'أعطال شائعة للفوق أوتوماتيك (دخول ماء، صرف، غطاء، اتزان، أو حساس ليفل)', check: 'افحص صمام الدخول، طلمبة الطرد، سويتش الغطاء، موازنة الحلة، وحساس الليفل.' },
+      { brand: 'Sharp / Kiriazi / General', type: 'top_load', code: 'سحب ماء مستمر أو عدم العصر (فوق أوتوماتيك)', fault: 'تعليق صمام الدخول، خلل حساس الليفل، أو مشكلة في الصرف/الفرامل/الكلتش', check: 'افحص صمام الدخول، الخرطوم الهوائي لحساس الليفل، طلمبة الطرد، وميكانيكية الحلة.' },
+
+      // LG
+      { brand: 'LG', code: 'OE', fault: 'مشكلة في طرد/تصريف المياه', check: 'افحص طلمبة الطرد، خرطوم الصرف من الانسداد/الالتواء، وفلتر الطلمبة.' },
+      { brand: 'LG', code: 'IE', fault: 'بطء أو عدم دخول المياه خلال الوقت المحدد', check: 'افحص ضغط المياه، صمام الدخول (Solenoid Valve)، والفلتر الشبكي.' },
+      { brand: 'LG', code: 'DE / dE / dE1 / dE2', fault: 'مشكلة في قفل الباب أو إغلاق الباب', check: 'افحص لسان الباب، مفتاح/قفل الباب (Door Lock)، وتوصيلات الضفيرة.' },
+      { brand: 'LG', code: 'UE', fault: 'عدم اتزان الغسيل أو توزيع الحمل داخل الحلة', check: 'أعد توزيع الملابس، افحص ميزان الغسالة، ومساعدات/سوست التعليق.' },
+      { brand: 'LG', code: 'FE', fault: 'زيادة منسوب المياه عن الحد المسموح (Overflow)', check: 'افحص صمام الدخول (قد يكون عالقاً مفتوحاً) وحساس مستوى المياه (Pressure Sensor).' },
+      { brand: 'LG', code: 'tE', fault: 'عطل في حساس درجة حرارة المياه (Thermistor)', check: 'قِس مقاومة حساس الحرارة وتأكد من سلامة الأسلاك والموصل.' },
+      { brand: 'LG', code: 'LE / LE1', fault: 'حمل زائد أو مقاومة دوران عالية للموتور / Direct Drive', check: 'افحص حركة الحلة يدوياً، حساس Hall، ملفات/توصيلات الموتور، وتوزيع الغسيل.' },
+
+      // Samsung
+      { brand: 'Samsung', code: '4E / 4C', fault: 'مشكلة في تزويد المياه أو تأخر دخولها', check: 'افحص مصدر المياه، خراطيم وصمام الدخول، وفلتر الشوائب.' },
+      { brand: 'Samsung', code: '5E / 5C', fault: 'مشكلة في تصريف المياه من الحلة', check: 'نظّف فلتر الطلمبة، افحص خرطوم الصرف، وتأكد من عمل طلمبة الطرد.' },
+      { brand: 'Samsung', code: 'dE / dC / Ed', fault: 'الباب غير مغلق بإحكام أو عطل قفل الباب', check: 'تأكد من غلق الباب بالكامل وفحص قفل الباب وأسلاكه.' },
+      { brand: 'Samsung', code: 'UE / UC', fault: 'عدم اتزان الحلة أثناء العصر', check: 'رتّب الملابس بالتساوي وتأكد من استواء الغسالة على الأرض.' },
+      { brand: 'Samsung', code: 'HE / HC / tE', fault: 'مشكلة في السخان أو حساس الحرارة', check: 'افحص مقاومة السخان (Heater)، حساس الحرارة، وتوصيلات الكارت.' },
+      { brand: 'Samsung', code: '3E / 3C / bE', fault: 'مشكلة في دوران الموتور أو حساس التاكو/السرعة', check: 'افحص توصيلات الموتور، الفحمات (إن وجدت)، حساس السرعة، أو درايفر الكارت.' },
+
+      // Toshiba
+      { brand: 'Toshiba', code: 'E1', fault: 'مشكلة في طرد/تصريف المياه', check: 'افحص مسار الصرف، طلمبة/صمام الطرد، والفلتر الداخلي.' },
+      { brand: 'Toshiba', code: 'E2', fault: 'عدم إغلاق الغطاء العلوي أو عطل سويتش الغطاء', check: 'افحص غطاء الغسالة ومفتاح أمان الغطاء (Lid Switch) والضفيرة.' },
+      { brand: 'Toshiba', code: 'E4 / E5', fault: 'مشكلة في دخول المياه أو حساس مستوى المياه', check: 'افحص ضغط المياه، صمام الدخول، وحساس الليفل/الخرطوم الهوائي.' },
+      { brand: 'Toshiba', code: 'E7 / E9 / EC', fault: 'خلل في حساس السرعة/الوزن أو دائرة التحكم', check: 'افحص حساس السرعة/الضفيرة وأعد اختبار التشغيل بعد مراجعة التوصيلات.' },
+
+      // Ariston / Indesit
+      { brand: 'Ariston / Indesit', code: 'F01 / F1', fault: 'مشكلة في دائرة تحكم الموتور أو قصر/توصيل الموتور', check: 'افحص موصل الموتور، الفحمات/الملفات، وتوصيلات الكارت الإلكتروني.' },
+      { brand: 'Ariston / Indesit', code: 'F02 / F2', fault: 'عدم استشعار دوران الموتور (Tachometer)', check: 'افحص حساس التاكو وضفيرة الموتور وحرية حركة الحلة.' },
+      { brand: 'Ariston / Indesit', code: 'F05 / F06 / F5', fault: 'مشكلة في تصريف المياه أو حساس مستوى المياه', check: 'افحص طلمبة الطرد، خرطوم الصرف، وحساس الضغط/الليفل.' },
+      { brand: 'Ariston / Indesit', code: 'F07 / F08', fault: 'مشكلة في دائرة السخان أو ريليه السخان', check: 'افحص السخان، حساس الحرارة، وريليه السخان على الكارت.' },
+      { brand: 'Ariston / Indesit', code: 'F12 / Door Lock', fault: 'عدم إتمام إشارة قفل الباب مع الكارت', check: 'افحص قفل الباب، الأسلاك بين الكارت والقفل، وسلامة سوكت الكارت.' },
+
+      // Zanussi / Electrolux
+      { brand: 'Zanussi / Electrolux', code: 'E10 / EF0', fault: 'مشكلة في دخول المياه أو وجود رغوة زائدة/انسداد صرف', check: 'افحص ضغط المياه، صمام الدخول، فلتر الطلمبة، وخرطوم الصرف.' },
+      { brand: 'Zanussi / Electrolux', code: 'E20 / EFn', fault: 'مشكلة في تصريف المياه من الغسالة', check: 'نظّف الفلتر وافحص طلمبة الطرد وخرطوم التصريف.' },
+      { brand: 'Zanussi / Electrolux', code: 'E40', fault: 'مشكلة في قفل الباب أو إغلاق الباب', check: 'تأكد من غلق الباب جيداً وفحص قفل الباب وأسلاكه.' },
+      { brand: 'Zanussi / Electrolux', code: 'E50 / EH0', fault: 'مشكلة في دائرة الموتور أو جهد التغذية', check: 'افحص توصيلات الموتور، الفحمات/الإنفرتر، واستقرار الجهد الكهربائي.' },
+
+      // Bosch / Siemens
+      { brand: 'Bosch / Siemens', code: 'E18 / F18', fault: 'عدم تصريف المياه خلال الزمن المحدد', check: 'نظّف فلتر الطلمبة، افحص ريش الطلمبة، وخرطوم الصرف.' },
+      { brand: 'Bosch / Siemens', code: 'E23 / F23', fault: 'تفعيل نظام منع التسريب (AquaStop / قاعدة المياه)', check: 'افحص وجود ماء أسفل الغسالة في صينية الأمان ومصدر التسريب.' },
+      { brand: 'Bosch / Siemens', code: 'E29 / F29', fault: 'عدم دخول المياه أو ضعف تدفق الماء', check: 'افحص محبس المياه، الفلتر، وصمام الدخول.' },
+
+      // المزيد من أكواد LG
+      { brand: 'LG', code: 'PE / PF', fault: 'مشكلة في حساس مستوى المياه أو قصر/توصيل خاطئ', check: 'افحص حساس الليفل، الخرطوم الهوائي، وضفيرة الكارت.' },
+      { brand: 'LG', code: 'AE / CL / PF', fault: 'فشل في الاتصال أو حماية الكارت / انقطاع كهرباء', check: 'افحص استقرار الجهد، كابل التغذية، وتوصيلات الكارت الإلكتروني.' },
+
+      // المزيد من أكواد Samsung
+      { brand: 'Samsung', code: '1E / 1C', fault: 'خلل في حساس مستوى المياه (Water Level Sensor)', check: 'افحص حساس الليفل، سلامة الخرطوم الهوائي، وتوصيلات الفيشة.' },
+      { brand: 'Samsung', code: '9E1 / 9E2 / OC / LC', fault: 'ارتفاع/انخفاض الجهد الكهربائي أو تسريب مياه بالقاعدة', check: 'قِس جهد التغذية وتأكد من عدم وجود تسريب مياه في قاعدة الغسالة.' },
+
+      // المزيد من أكواد Toshiba
+      { brand: 'Toshiba', code: 'E3 / E6', fault: 'مشكلة في عدم ثبات الحلة/العصر أو حساسات الحماية', check: 'افحص توزيع الغسيل، موازنة الحلة، ومسار الصرف والحساسات.' },
+
+      // المزيد من أكواد Ariston / Indesit
+      { brand: 'Ariston / Indesit', code: 'F09 / F10 / F11', fault: 'خلل في سوفتوير/إعدادات الكارت أو دائرة الطلمبة', check: 'افحص طلمبة الطرد، التوصيلات، وسلامة مسارات الكارت.' },
+
+      // المزيد من أكواد Zanussi / Electrolux
+      { brand: 'Zanussi / Electrolux', code: 'E60 / E66 / E70', fault: 'مشكلة في دائرة التسخين أو حساس الحرارة', check: 'افحص مقاومة السخان، حساس الحرارة، وريليه التسخين.' },
+
+      // المزيد من أكواد Bosch / Siemens
+      { brand: 'Bosch / Siemens', code: 'E02 / F02', fault: 'مشكلة في دوران الموتور أو الفحمات/التوصيلات', check: 'افحص الفحمات، ضفيرة الموتور، وحرية حركة الحلة.' },
+
+      // Sharp / Kiriazi / General
+      { brand: 'Sharp / Kiriazi / General', code: 'E3 / E4 / PE / DE', fault: 'عدم اتزان الغسيل أو مشكلة في مستوى المياه أو قفل الباب', check: 'أعد موازنة الحمل وافحص حساس الليفل، قفل الباب، وضفيرة التحكم.' },
+      { brand: 'Sharp / Kiriazi / General', code: 'طرد مستمر أو دخول ماء بدون توقف', check: 'افحص صمام الدخول (قد لا يغلق بالكامل) وحساس الليفل أو الكارت.' },
+
+      // Sharp / Kiriazi / General
+      { brand: 'Sharp / Kiriazi / General', code: 'E1 / E2 / IE / OE', fault: 'أعطال شائعة في تزويد المياه أو الصرف أو الباب', check: 'طابق الكود مع دليل الموديل وافحص صمام الدخول، طلمبة الطرد، وسويتش الباب/الغطاء.' },
+      { brand: 'Sharp / Kiriazi / General', code: 'عدم العصر أو توقف البرنامج مع بقاء الماء', check: 'افحص طلمبة الطرد، حساس مستوى المياه، فرامل/كلتش الحلة، وتوزيع الغسيل.' }
+    ];
+
+    function renderWasherCodesTable() {
+      var tbody = document.getElementById('washerCodesTableBody');
+      if (!tbody) return;
+
+      var qEl = document.getElementById('washerCodeSearch');
+      var tEl = document.getElementById('washerTypeFilter');
+      var bEl = document.getElementById('washerBrandFilter');
+      var q = (qEl && qEl.value ? qEl.value.trim().toLowerCase() : '');
+      var wType = (tEl && tEl.value ? tEl.value : 'all');
+      var brand = (bEl && bEl.value ? bEl.value : 'all');
+
+      var filtered = WASHING_MACHINE_CODES.filter(function(item) {
+        var itemType = item.type || 'front_load';
+        var typeMatch = (wType === 'all' || itemType === wType);
+        if (!typeMatch) return false;
+        var brandMatch = (brand === 'all' || item.brand === brand);
+        if (!brandMatch) return false;
+        if (!q) return true;
+        var hay = (item.brand + ' ' + item.code + ' ' + item.fault + ' ' + item.check + ' ' + (itemType === 'top_load' ? 'فوق أوتوماتيك top load' : 'أمامي front load')).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:var(--muted); padding:16px;">لا توجد أكواد مطابقة للبحث الحالي.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(function(item) {
+        return '<tr>' +
+          '<td><strong>' + item.brand + '</strong></td>' +
+          '<td><span class="code-pill">' + item.code + '</span></td>' +
+          '<td>' + item.fault + '</td>' +
+          '<td>' + item.check + '</td>' +
+        '</tr>';
+      }).join('');
+    }
+
+
+    const AC_FAULT_CODES = [
+      { brand: 'Carrier (كارير)', code: 'E1 / E2', fault: 'عطل حساس درجة حرارة الهواء أو حساس الكويل الداخلي', check: 'افحص مقاومة سنسور الغرفة وسنسور الكويل وسلامة أطراف التوصيل.' },
+      { brand: 'Carrier (كارير)', code: 'E4 / E5 / P4', fault: 'حماية ارتفاع حرارة المواسير/الضاغط أو مشكلة في الوحدة الخارجية', check: 'افحص نظافة المكثف، مروحة الخارجية، الفريون، والكونتاكتور/الكاباسيتور.' },
+      { brand: 'Carrier (كارير)', code: 'E6 / EC', fault: 'مشكلة اتصال بين الداخلية والخارجية أو عطل مروحة/كارت', check: 'راجع كابل الإشارة، ملفات موتور المروحة، وسلامة الكارت.' },
+      { brand: 'LG (إل جي)', code: 'CH01 / CH02', fault: 'مشكلة في حساس حرارة الهواء الداخلي أو حساس ملف المبخر', check: 'قِس مقاومة الثرمستور وتأكد من عدم وجود قطع أو رطوبة بالفيشة.' },
+      { brand: 'LG (إل جي)', code: 'CH05 / CH10', fault: 'خلل في الاتصال بين الوحدتين أو مشكلة في موتور مروحة الداخلية', check: 'افحص خط البيانات (Comm) وسرعة/نبضات موتور المروحة.' },
+      { brand: 'LG (إل جي)', code: 'CH21 / CH23 / CH26', fault: 'حماية تيار/جهد الإنفرتر أو ارتفاع حرارة الضاغط/DC Bus', check: 'افحص الجهد الكهربائي، تهوية الخارجية، شحنة الفريون، ودائرة الإنفرتر.' },
+      { brand: 'Samsung (سامسونج)', code: 'E1 21 / E1 22', fault: 'مشكلة في حساس حرارة الغرفة أو حساس مبخر الوحدة الداخلية', check: 'افحص الحساسات وأسلاكها وتأكد من ثباتها في مكانها.' },
+      { brand: 'Samsung (سامسونج)', code: 'E1 54 / E4 61 / E4 64', fault: 'مشكلة في مروحة الداخلية أو بدء/تشغيل الضاغط أو تيار الإنفرتر', check: 'افحص موتور المروحة، كاباسيتور/درايفر الكباس، والمقاومات/الضغوط.' },
+      { brand: 'Sharp (شارب)', code: 'H1 / F1 / E1', fault: 'حماية ضغط/حرارة أو خلل في الحساسات أو مروحة الوحدة', check: 'افحص نظافة الفلاتر والمكثف، الحساسات، وسلامة المروحة.' },
+      { brand: 'Sharp (شارب)', code: 'U4 / CC / CH', fault: 'مشكلة اتصال أو خطأ في إشارة التحكم بين الوحدتين', check: 'افحص توصيلات الكابلات بين الداخلية والخارجية والتغذية.' },
+      { brand: 'Midea / Fresh / General', code: 'E1 / E2 / E3', fault: 'عطل حساس الغرفة، حساس الكويل، أو حساس الكويل الخارجي/السرعة', check: 'افحص الثرمستورات وسرعة مروحة الوحدة الداخلية/الخارجية.' },
+      { brand: 'Midea / Fresh / General', code: 'E4 / E5 / P1 / P4', fault: 'حماية تجمد/حرارة أو جهد/ضغط أو مشكلة اتصال/إنفرتر', check: 'افحص الجهد، الشحنة، نظافة الكويلات، وسلامة التوصيلات.' },
+      { brand: 'Daikin / Gree', code: 'U4 / A6 / E6 / H6', fault: 'مشكلة اتصال بين الوحدتين أو موتور مروحة الداخلية أو حماية الضاغط', check: 'افحص كابل الربط، موتور المروحة، والحساسات وشحنة الفريون.' }
+    ];
+
+    function renderAcCodesTable() {
+      var tbody = document.getElementById('acCodesTableBody');
+      if (!tbody) return;
+      var qEl = document.getElementById('acCodeSearch');
+      var q = (qEl && qEl.value ? qEl.value.trim().toLowerCase() : '');
+
+      var filtered = AC_FAULT_CODES.filter(function(item) {
+        if (!q) return true;
+        var hay = (item.brand + ' ' + item.code + ' ' + item.fault + ' ' + item.check).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:var(--muted); padding:16px;">لا توجد نتائج مطابقة لأعطال التكييف.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(function(item) {
+        return '<tr>' +
+          '<td><strong>' + item.brand + '</strong></td>' +
+          '<td><span class="code-pill">' + item.code + '</span></td>' +
+          '<td>' + item.fault + '</td>' +
+          '<td>' + item.check + '</td>' +
+        '</tr>';
+      }).join('');
+    }
+
+
+    const COMPRESSOR_GUIDE_DATA = [
+      {
+        cat: 'hermetic',
+        type: 'ضاغط هيرميتيك ثلاجات ومبردات مياه',
+        spec: '220V–240V / R134a أو R600a',
+        amp: '~ 0.8 – 2.2 A (حسب القدرة والحمل)',
+        check: 'قِس مقاومة ملفات التشغيل والتقويم (C-R-S)، افحص العزل للأرضي، وتأكد من كفاءة الريليه والأوفرلود وسلامة التهوية.'
+      },
+      {
+        cat: 'hermetic',
+        type: 'ضاغط ديب فريزر وتجميد منزلي/تجاري صغير',
+        spec: '220V–240V / R134a أو R404A أو R290',
+        amp: '~ 1.2 – 4.5 A (حسب القدرة والحمل)',
+        check: 'راقب الأمبير عند بدء التجميد وبعد الاستقرار، وتأكد من عدم وجود رطوبة أو انسداد جزئي أو شحنة زائدة.'
+      },
+      {
+        cat: 'ac',
+        type: 'ضاغط تكييف روتاري / ترددي شباك وسبليت (1 – 2.25 حصان)',
+        spec: '220V–240V / R22 أو R410A',
+        amp: '~ 4.5 – 12.5 A (حسب القدرة والجهد)',
+        check: 'افحص كاباسيتور التشغيل والتقويم، نظافة المكثف والملفات، اتجاه وسرعة المروحة، وضغط السحب/الطرد.'
+      },
+      {
+        cat: 'ac',
+        type: 'ضاغط تكييف ترددي / سكرول (3 – 5 حصان)',
+        spec: '220V (1-Ph) أو 380V (3-Ph) / R22 أو R410A',
+        amp: '~ 8 – 24 A (يختلف حسب فازة واحدة أو 3 فاز)',
+        check: 'في الـ 3 فاز تأكد من اتزان التيار بين الفازات الثلاث (L1, L2, L3)، وسلامة الكونتاكتور، الأوفرلود، وحماية الفازات.'
+      },
+      {
+        cat: 'commercial',
+        type: 'وحدة تكثيف غرف تبريد وتجميد تجارية',
+        spec: '220V أو 380V / R404A أو R448A/R449A أو R22',
+        amp: 'حسب قدرة الضاغط ودرجة التبخير/التكثيف',
+        check: 'راقب سخونة خط الطرد، كفاءة مكثف الغرفة، إذابة الثلج (Defrost)، وتوازن السحب والطرد مع حرارة الغرفة.'
+      },
+      {
+        cat: 'ac',
+        type: 'ضاغط إنفرتر (DC / BLDC Inverter)',
+        spec: 'حسب قدرة الوحدة / R410A أو R32',
+        amp: 'متغير حسب سرعة الضاغط والحمل',
+        check: 'لا تعتمد على رقم أمبير ثابت؛ راقب استقرار التردد/السرعة، كارت الإنفرتر، حساسات الحرارة، وسلامة التوصيلات.'
+      }
+    ];
+
+
+    const COMPRESSOR_SPECS_TABLE = [
+      // ضواغط زانوسي (Zanussi) بأرقامها وقدراتها
+      {
+        hp: '1/6 حصان (LBP)',
+        type: 'zanussi',
+        typeLabel: 'ضاغط زانوسي (Zanussi) - هيرميتيك',
+        models: 'Zanussi HTK60AA / HTK65AA / ZEM60 / ZEM65',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/6 حصان — راجع الكود الكامل على شاسيه الكباس وتطابق التطبيق (ثلاجة/فريزر).'
+      },
+      {
+        hp: '1/5 حصان (LBP)',
+        type: 'zanussi',
+        typeLabel: 'ضاغط زانوسي (Zanussi) - هيرميتيك',
+        models: 'Zanussi HTK70AA / HTK75AA / ZEM70 / ZEM75',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/5 حصان — قِس مقاومة الملفات C-R-S وتأكد من سلامة الريليه والأوفرلود.'
+      },
+      {
+        hp: '1/4 حصان (LBP)',
+        type: 'zanussi',
+        typeLabel: 'ضاغط زانوسي (Zanussi) - هيرميتيك',
+        models: 'Zanussi HTK80AA / HTK85AA / HTK90AA / ZEM80 / ZEM85',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/4 حصان — شائع في الثلاجات المنزلية؛ راقب الأمبير وضغط السحب والاستقرار.'
+      },
+      {
+        hp: '1/3 حصان (LBP)',
+        type: 'zanussi',
+        typeLabel: 'ضاغط زانوسي (Zanussi) - هيرميتيك',
+        models: 'Zanussi HTK95AA / HTK105AA / GVM66AA / GVM75AA',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/3 حصان — مناسب للأحجام الأكبر/التجميد الخفيف حسب موديل الكباس.'
+      },
+      {
+        hp: '1/2 حصان (LBP / MBP)',
+        type: 'zanussi',
+        typeLabel: 'ضاغط زانوسي (Zanussi) - هيرميتيك تجاري',
+        models: 'Zanussi GVM80AA / GVM90AA / GL90AA / GL99AA',
+        spec: '220–240V / R134a أو R404A',
+        note: 'قدرة 1/2 حصان — راقب تبديد الحرارة، نظافة المكثف، وشحنة الفريون بدقة.'
+      },
+
+      // أرقام ومواتير/كباسات أخرى بقدراتها (Secop/Danfoss, Embraco, Tecumseh, GMCC, Copeland)
+      {
+        hp: '1/6 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تبريد هيرميتيك',
+        models: 'Secop/Danfoss TL2.5G / TLES4F، Embraco FF6HBK / EM2X، Tecumseh AE4430Y',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/6 حصان — قارن القدرة بالواط/BTU عند درجة التبخير المطلوبة.'
+      },
+      {
+        hp: '1/5 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تبريد هيرميتيك',
+        models: 'Secop/Danfoss TL3G / TLES5.7KK، Embraco FF7.5HBK / EM3S، Tecumseh AE4440Y',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/5 حصان — راقب الأمبير وحرارة خط الطرد والريليه/الأوفرلود.'
+      },
+      {
+        hp: '1/4 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تبريد هيرميتيك',
+        models: 'Secop/Danfoss TL4G / TLES7KK، Embraco FF8.5HBK / FFI12HBX، Tecumseh AE4450Y / TH1368Y',
+        spec: '220–240V / R134a أو R600a',
+        note: 'قدرة 1/4 حصان — تأكد من مطابقة نوع الفريون والزيت والكابيلاري.'
+      },
+      {
+        hp: '1/3 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تبريد هيرميتيك',
+        models: 'Secop/Danfoss FR8.5G / SC10G، Embraco NEU6210Z / NEK6212Z، Tecumseh CAE2417Z',
+        spec: '220–240V / R134a أو R404A',
+        note: 'قدرة 1/3 حصان — راقب التيار التشغيلي وضغط السحب عند استقرار الدائرة.'
+      },
+      {
+        hp: '1/2 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تبريد وتجميد',
+        models: 'Secop/Danfoss SC12G / SC15G / SC18G، Embraco NJ9226GK / NEK6217Z، Tecumseh AJ2464Z',
+        spec: '220–240V / R134a أو R404A',
+        note: 'قدرة 1/2 حصان — راقب كفاءة الكوندنسر، المروحة، وضبط الشحنة.'
+      },
+      {
+        hp: '3/4 – 1 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تكييف روتاري',
+        models: 'GMCC/Toshiba KSG102 / KSN120 / KSN140، LG QK164 / QA180، Rechi 39V220 / 44V260',
+        spec: '220–240V / R22 أو R410A أو R32',
+        note: 'قدرة 3/4 إلى 1 حصان — افحص كاباسيتور التشغيل وضغوط السحب/الطرد.'
+      },
+      {
+        hp: '1.5 – 2 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس تكييف روتاري وترددي',
+        models: 'GMCC KSG180 / KSN210 / KSM240، LG QP222 / QP242، Copeland CR22 / CR32',
+        spec: '220–240V / R22 أو R410A',
+        note: 'قدرة 1.5 إلى 2 حصان — راقب الأمبير وسخونة المكثف والضاغط في الذروة.'
+      },
+      {
+        hp: '3 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس سكرول وترددي',
+        models: 'Copeland Scroll ZR36 / ZR42 / ZB29، Danfoss SM32 / SM36 / SZ038',
+        spec: '220V أو 380V / R22 أو R410A أو R404A',
+        note: 'قدرة 3 حصان — تأكد من اتجاه الدوران واتزان التيار في الـ 3 فاز.'
+      },
+      {
+        hp: '5 حصان',
+        type: 'motors_hp',
+        typeLabel: 'موتور / كباس سكرول وترددي',
+        models: 'Copeland Scroll ZR61 / ZR68 / ZB45، Danfoss SM56 / SM61 / SZ066',
+        spec: '380V (3-Ph شائع) / R22 أو R410A أو R404A',
+        note: 'قدرة 5 حصان — راقب حماية الفازات، الكونتاكتور، وقدرة التبريد بالواط/BTU.'
+      }
+    ];
+
+    function renderCompressorSpecsTable() {
+      var tbody = document.getElementById('compressorSpecsTableBody');
+      if (!tbody) return;
+      var qEl = document.getElementById('compSpecsSearch');
+      var tEl = document.getElementById('compSpecsTypeFilter');
+      var q = (qEl && qEl.value ? qEl.value.trim().toLowerCase() : '');
+      var t = (tEl && tEl.value ? tEl.value : 'all');
+
+      var filtered = COMPRESSOR_SPECS_TABLE.filter(function(item) {
+        var typeMatch = (t === 'all' || item.type === t);
+        if (!typeMatch) return false;
+        if (!q) return true;
+        var hay = (item.hp + ' ' + item.typeLabel + ' ' + item.models + ' ' + item.spec + ' ' + item.note).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:var(--muted); padding:16px;">لا توجد قدرات أو أرقام مطابقة للبحث الحالي.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(function(item) {
+        return '<tr>' +
+          '<td><span class="code-pill">' + item.hp + '</span></td>' +
+          '<td><strong>' + item.typeLabel + '</strong></td>' +
+          '<td>' + item.models + '</td>' +
+          '<td>' + item.spec + '</td>' +
+          '<td>' + item.note + '</td>' +
+        '</tr>';
+      }).join('');
+    }
+
+    function calcCompressorAmp() {
+      var typeEl = document.getElementById('compCalcType');
+      var hpEl = document.getElementById('compCalcHp');
+      var measEl = document.getElementById('measuredAmpInput');
+      var outEl = document.getElementById('compAmpResultBox');
+      if (!typeEl || !hpEl || !outEl) return;
+
+      var t = typeEl.value;
+      var hp = parseFloat(hpEl.value) || 1.5;
+      var measured = parseFloat(measEl && measEl.value ? measEl.value : '');
+
+      var estAmp = 0;
+      var note = '';
+      if (t === 'recip_1ph') {
+        estAmp = hp * 4.8;
+        note = 'تقدير استرشادي لأحادي الوجه 220V — يرتفع مع ارتفاع الجهد/حرارة الطرد أو ضعف التبريد.';
+      } else if (t === 'rotary_1ph') {
+        estAmp = hp * 4.3;
+        note = 'تقدير استرشادي لتكييف 220V — راقب الكاباسيتور، نظافة الكويل، وضغط التشغيل.';
+      } else {
+        estAmp = hp * 1.95;
+        note = 'تقدير استرشادي لثلاثي الوجه 380V — تأكد من تقارب قراءات الفازات الثلاث.';
+      }
+
+      var lowRange = (estAmp * 0.82).toFixed(1);
+      var highRange = (estAmp * 1.18).toFixed(1);
+
+      var statusLine = '';
+      if (!isNaN(measured) && measured > 0) {
+        if (measured > estAmp * 1.2) {
+          statusLine = '\n• *التقييم المبدئي:* الأمبير المقاس (' + measured.toFixed(1) + ' A) أعلى من النطاق الاسترشادي — افحص الجهد، المكثف/المروحة، الشحنة، أو ميكانيكية الضاغط.';
+        } else if (measured < estAmp * 0.75) {
+          statusLine = '\n• *التقييم المبدئي:* الأمبير المقاس (' + measured.toFixed(1) + ' A) أقل من النطاق الاسترشادي — قد يدل على نقص شحنة أو ضعف تحميل/تفريغ.';
+        } else {
+          statusLine = '\n• *التقييم المبدئي:* الأمبير المقاس (' + measured.toFixed(1) + ' A) قريب من النطاق الاسترشادي — أكّد بالقراءة مع الضغوط والحرارة الفعلية.';
+        }
+      }
+
+      outEl.innerText = '*تقدير استرشادي للتيار التشغيلي:*\n' +
+                      '• *القدرة:* ' + hp + ' حصان | *النطاق الاسترشادي التقريبي:* ' + lowRange + ' – ' + highRange + ' أمبير\n' +
+                      '• *ملاحظة:* ' + note + statusLine;
+    }
+
+    function renderCompressorsTable() {
+      var tbody = document.getElementById('compressorsTableBody');
+      if (!tbody) return;
+      var qEl = document.getElementById('compSearch');
+      var catEl = document.getElementById('compCategoryFilter');
+      var q = (qEl && qEl.value ? qEl.value.trim().toLowerCase() : '');
+      var cat = (catEl && catEl.value ? catEl.value : 'all');
+
+      var filtered = COMPRESSOR_GUIDE_DATA.filter(function(item) {
+        var catMatch = (cat === 'all' || item.cat === cat);
+        if (!catMatch) return false;
+        if (!q) return true;
+        var hay = (item.type + ' ' + item.spec + ' ' + item.amp + ' ' + item.check).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      if (!filtered.length) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:var(--muted); padding:16px;">لا توجد نتائج مطابقة للبحث الحالي.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(function(item) {
+        return '<tr>' +
+          '<td><strong>' + item.type + '</strong></td>' +
+          '<td>' + item.spec + '</td>' +
+          '<td><span class="code-pill">' + item.amp + '</span></td>' +
+          '<td>' + item.check + '</td>' +
+        '</tr>';
+      }).join('');
+    }
+
+
+    function runQuickGlobalSearch() {
+      var inputEl = document.getElementById('quickGlobalSearch');
+      var box = document.getElementById('quickSearchResults');
+      if (!inputEl || !box) return;
+
+      var q = inputEl.value.trim().toLowerCase();
+      if (!q) {
+        box.classList.add('hidden');
+        box.innerHTML = '';
+        return;
+      }
+
+      var matches = [];
+
+      if (typeof WASHING_MACHINE_BEARINGS !== 'undefined') {
+        WASHING_MACHINE_BEARINGS.forEach(function(b) {
+          var hay = (b.brand + ' ' + b.spec + ' ' + b.inner + ' ' + b.outer + ' ' + b.seal + ' ' + b.notes).toLowerCase();
+          if (hay.indexOf(q) !== -1) {
+            matches.push({
+              tag: 'بلي غسالات',
+              tab: 'bearings',
+              title: b.brand + ' (' + b.spec + ')',
+              sub: 'داخلي: ' + b.inner + ' | خارجي: ' + b.outer + ' | ' + b.seal
+            });
+          }
+        });
+      }
+
+      if (typeof WASHING_MACHINE_CODES !== 'undefined') {
+        WASHING_MACHINE_CODES.forEach(function(c) {
+          var hay = (c.brand + ' ' + c.code + ' ' + c.fault + ' ' + c.check).toLowerCase();
+          if (hay.indexOf(q) !== -1) {
+            matches.push({
+              tag: 'عطل غسالة',
+              tab: 'washercodes',
+              title: c.brand + ' — ' + c.code,
+              sub: c.fault + ' | الفحص: ' + c.check
+            });
+          }
+        });
+      }
+
+      if (typeof AC_FAULT_CODES !== 'undefined') {
+        AC_FAULT_CODES.forEach(function(a) {
+          var hay = (a.brand + ' ' + a.code + ' ' + a.fault + ' ' + a.check).toLowerCase();
+          if (hay.indexOf(q) !== -1) {
+            matches.push({
+              tag: 'عطل تكييف',
+              tab: 'accodes',
+              title: a.brand + ' — ' + a.code,
+              sub: a.fault + ' | الفحص: ' + a.check
+            });
+          }
+        });
+      }
+
+      if (typeof COMPRESSOR_SPECS_TABLE !== 'undefined') {
+        COMPRESSOR_SPECS_TABLE.forEach(function(sp) {
+          var hay = (sp.hp + ' ' + sp.typeLabel + ' ' + sp.models + ' ' + sp.spec + ' ' + sp.note).toLowerCase();
+          if (hay.indexOf(q) !== -1) {
+            matches.push({
+              tag: 'قدرات وأرقام ضواغط',
+              tab: 'compressors',
+              title: sp.hp + ' — ' + sp.typeLabel,
+              sub: sp.models + ' | ' + sp.spec
+            });
+          }
+        });
+      }
+
+      if (typeof COMPRESSOR_GUIDE_DATA !== 'undefined') {
+        COMPRESSOR_GUIDE_DATA.forEach(function(p) {
+          var hay = (p.type + ' ' + p.spec + ' ' + p.amp + ' ' + p.check).toLowerCase();
+          if (hay.indexOf(q) !== -1) {
+            matches.push({
+              tag: 'ضواغط وأمبير',
+              tab: 'compressors',
+              title: p.type + ' (' + p.amp + ')',
+              sub: p.spec + ' | ' + p.check
+            });
+          }
+        });
+      }
+
+      box.classList.remove('hidden');
+      if (!matches.length) {
+        box.innerHTML = '<div style="text-align:center; color:var(--muted); padding:8px; font-size:0.86rem;">لا توجد نتائج مطابقة لـ "' + inputEl.value + '"</div>';
+        return;
+      }
+
+      box.innerHTML = matches.slice(0, 12).map(function(m) {
+        return '<div style="padding:8px; border-bottom:1px solid #e5e7eb; display:flex; justify-content:space-between; align-items:flex-start; gap:8px; flex-wrap:wrap;">' +
+          '<div style="flex:1; min-width:200px;">' +
+            '<span class="code-pill" style="margin-left:6px;">' + m.tag + '</span>' +
+            '<strong style="font-size:0.88rem; color:var(--primary);">' + m.title + '</strong>' +
+            '<div style="font-size:0.82rem; color:#374151; margin-top:2px;">' + m.sub + '</div>' +
+          '</div>' +
+          '<button type="button" class="btn btn-secondary btn-sm" onclick="jumpToSearchTab(\'' + m.tab + '\')">فتح القسم</button>' +
+        '</div>';
+      }).join('');
+    }
+
+    function jumpToSearchTab(tabName) {
+      var btn = document.getElementById('btn-tab-' + tabName);
+      switchTab(tabName, btn);
+    }
+
+    function clearQuickSearch() {
+      var inputEl = document.getElementById('quickGlobalSearch');
+      var box = document.getElementById('quickSearchResults');
+      if (inputEl) inputEl.value = '';
+      if (box) {
+        box.innerHTML = '';
+        box.classList.add('hidden');
+      }
+    }
+
+
+    function initApp() {
+      var savedPhone = '';
+      try {
+        savedPhone = localStorage.getItem('consultant_phone') || '';
+      } catch (e) {}
+      var phoneInput = document.getElementById('consultantPhone');
+      if (phoneInput) {
+        phoneInput.value = savedPhone || DEFAULT_WHATSAPP_PHONE;
+      }
+      updateWhatsappDirectLink();
+      renderLog();
+      showRefGuide();
+      renderBearingsTable();
+      showCarrierRecipGuide();
+      renderWasherCodesTable();
+      renderAcCodesTable();
+      calcCompressorAmp();
+      renderCompressorSpecsTable();
+      renderCompressorsTable();
+      bindTabButtons();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
+
+    function downloadHtmlFile() {
+      try {
+        var htmlBlob = new Blob([document.documentElement.outerHTML], { type: 'text/html;charset=utf-8' });
+        var url = URL.createObjectURL(htmlBlob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'consultant_assistant_google.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+        showToast('تم تجهيز تحميل ملف التطبيق ✅');
+      } catch (e) {
+        showToast('استخدم زر الطباعة أو احفظ الصفحة من المتصفح');
+      }
+    }
+
+    function openGoogleSearchHelper() {
+      var equip = (document.getElementById('equipType') && document.getElementById('equipType').value) || 'تبريد وتكييف';
+      var codeOrBrand = (document.getElementById('tempsCode') && document.getElementById('tempsCode').value.trim()) ||
+                        (document.getElementById('brandModel') && document.getElementById('brandModel').value.trim()) ||
+                        equip;
+      var q = encodeURIComponent(codeOrBrand);
+      window.open('https://www.google.com/search?q=' + q, '_blank');
+    }
+
+  </script>
+
+
+</body></html>
